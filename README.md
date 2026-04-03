@@ -208,3 +208,43 @@ O conselho de padrões de auditoria do American Institute of Certified Public Ac
 São usados para avaliar a conformidade financeira e os níveis de risco de uma organização. Também abrangem a confidencialidade, a privacidade, a integridade, a disponibilidade, a segurança e a segurança geral dos dados. As falhas de controle nessas áreas podem levar a fraudes.
 
 **Dica profissional**: há várias normas que são revisadas com frequência. Recomendamos que você se mantenha atualizado com as mudanças e explore mais estruturas, controles e conformidade. Duas sugestões para pesquisa: a Lei Gramm-Leach-Bliley e a Lei Sarbanes-Oxley.
+
+#### Conceitos éticos que orientam as decisões de segurança cibernética
+
+##### Preocupações éticas e leis relacionadas a contra-ataques
+
+**Ponto de vista dos Estados Unidos sobre contra-ataques**
+
+Nos EUA, a implantação de um contra-ataque contra um agente de ameaça é ilegal devido a leis como a Computer Fraud and Abuse Act de 1986 e a Cybersecurity Informações Sharing Act de 2015, entre outras. Você só pode se defender. O ato de contra-atacar nos EUA é visto como um ato de vigilantismo. Um vigilante é uma pessoa que não é membro da polícia e que decide impedir um crime por conta própria. E como os agentes de ameaças são criminosos, os contra-ataques podem levar a um maior Encaminhamento do ataque, o que pode causar ainda mais danos e prejuízos. Por fim, se o agente da ameaça em questão for um hacktivista patrocinado pelo Estado, um contra-ataque pode levar a sérias implicações internacionais. Um hacktivista é uma pessoa que usa o hacking para atingir um objetivo político. O objetivo político pode ser promover a mudança social ou a desobediência civil.
+
+Por esses motivos, os únicos indivíduos nos EUA que têm permissão para contra-atacar são funcionários aprovados do governo federal ou militares.
+
+**Ponto de vista internacional sobre contra-ataques**
+
+A Corte Internacional de Justiça (ICJ), que atualiza suas orientações regularmente, afirma que uma pessoa ou grupo pode contra-atacar se:
+
+- O contra-ataque afetará apenas a parte que atacou primeiro.
+- O contra-ataque for uma comunicação direta pedindo que o atacante inicial pare.
+- O contra-ataque não aumentar a situação.
+- Os efeitos do contra-ataque puderem ser revertidos.
+
+Normalmente, as organizações não contra-atacam porque os cenários e parâmetros acima são difíceis de medir. Há muita Incerteza sobre o que é e o que não é legal e, às vezes, é muito difícil controlar os resultados negativos. As ações de contra-ataque geralmente levam a um resultado pior, especialmente quando você não é um profissional experiente no Campo.
+
+Para saber mais sobre cenários específicos e preocupações éticas de uma perspectiva internacional, consulte as atualizações fornecidas no **Manual de Tallinn on-line**.
+
+#### Princípios éticos e metodologias
+
+Como os contra-ataques são geralmente desaprovados ou ilegais, a área de segurança criou frameworks e controles - como a tríade Confiança, integridade e disponibilidade (CIA) e outros discutidos anteriormente no programa - para tratar de questões de confidencialidade, proteções de privacidade e leis. Para entender melhor a relação entre essas questões e as obrigações éticas dos profissionais de segurança cibernética, analise os conceitos-chave a seguir, pois eles se relacionam ao uso da ética para proteger as organizações e as pessoas a quem elas servem. 
+
+**Confidencialidade** significa que somente usuários autorizados podem acessar recursos ou dados específicos. A confidencialidade, no que se refere à Ética profissional, significa que é necessário haver um alto nível de respeito à privacidade para proteger os recursos e dados privados.
+
+**Proteção da privacidade** significa proteger as informações pessoais contra o uso não autorizado. Informações de identificação pessoal (PII) e informações sensíveis de identificação pessoal (SPII) são tipos de dados pessoais que podem causar danos às pessoas se forem roubados. Dados **PII** são quaisquer informações usadas para inferir a identidade de um indivíduo, como seu nome e número de telefone. Os dados **SPII** são um tipo específico de PII que se enquadra em diretrizes de manuseio mais rígidas, incluindo números de segurança social e números de cartões de crédito. Para proteger efetivamente os dados de PII e SPII , os profissionais de segurança têm a obrigação ética de proteger informações privadas, identificar vulnerabilidades de segurança, gerenciar riscos organizacionais e alinhar a segurança aos objetivos de negócios.
+
+**Leis** são regras reconhecidas por uma comunidade e aplicadas por uma entidade governamental. Como profissional de segurança, você terá a obrigação ética de proteger sua organização, sua infraestrutura interna e as pessoas envolvidas com a organização. Para fazer isso:
+
+- Você deve permanecer imparcial e conduzir seu trabalho de forma honesta, responsável e com o mais alto respeito pela lei.
+- Seja transparente e justo, e confie em evidências.
+- Assegure-se de que esteja sempre empenhado no trabalho que está fazendo, para que possa tratar de forma adequada e ética os problemas que surgirem.
+- Mantenha-se informado e esforce-se para aprimorar suas habilidades, para que possa contribuir para a melhoria do cenário cibernético. 
+
+Como exemplo, considere a **Lei de Portabilidade e Responsabilidade de Seguros de Saúde (HIPAA)**, que é uma lei federal dos EUA estabelecida para proteger as informações de saúde dos pacientes, também conhecidas como PHI, ou informações de saúde protegidas. Essa lei proíbe que as informações dos pacientes sejam compartilhadas sem o consentimento deles. Portanto, como profissional de segurança, você pode ajudar a garantir que a organização para a qual trabalha cumpra a obrigação legal e ética de informar os pacientes sobre uma violação, caso seus dados de saúde sejam expostos.
