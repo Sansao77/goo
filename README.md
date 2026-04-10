@@ -1,8 +1,18 @@
-# Cibersegurança- 2025
+# Cibersegurança - 2025
 
 ## Descrição
 
 Curso de Cibersegurança do Google, realizado na plataforma Coursera.
+
+## Indice
+
+- [Fundamentos da segurança cibernética](#fundamentos-da-segurança-cibernética)
+    - [Modulo 1: Introdução a segurança cibernética](#modulo-1-introdução-a-segurança-cibernética)
+    - [Modulo 2: A evolução da segurança cibernética](#modulo-2-a-evolução-da-segurança-cibernética)
+    - [Modulo 3: Proteger-se contra ameaças, riscos e vunerabilidades](#modulo-3-proteger-se-contra-ameaças-riscos-e-vunerabilidades)
+    - [Modulo 4: Ferramentas de segurança cibernética e linguagens de programação](#modulo-4-ferramentas-de-segurança-cibernética-e-linguagens-de-programação)
+    
+- [Jogar com segurança: Gerencie os riscos de segurança](#jogar-com-segurança-gerencie-os-riscos-de-segurança)
 
 ## Fundamentos da segurança cibernética
 
@@ -32,7 +42,7 @@ Curso de Cibersegurança do Google, realizado na plataforma Coursera.
         - Análise do Tráfego da Web
         - Alerta de atividades suspeitas
 
-### Habilidades Transferiveis
+#### Habilidades Transferiveis
 
 Você provavelmente desenvolveu muitas habilidades transferíveis por meio de experiências de vida; algumas dessas habilidades o ajudarão a prosperar como profissional de segurança cibernética. Entre elas estão:
 
@@ -46,7 +56,7 @@ Você provavelmente desenvolveu muitas habilidades transferíveis por meio de ex
 
 - **Diversidade de perspectivas**: A única maneira de ir longe é juntos. Respeitando uns aos outros e incentivando perspectivas diversas e respeito mútuo, sem dúvida, você encontrará várias e melhores soluções para os problemas de segurança.
 
-### Habilidades Técnicas
+#### Habilidades Técnicas
 
 Há muitas habilidades técnicas que o ajudarão a ter sucesso no Campo da segurança cibernética. Você aprenderá e praticará essas habilidades à medida que avança no programa de certificação. Algumas das ferramentas e conceitos que você precisará usar e entender incluem
 
@@ -126,7 +136,7 @@ Os motivos pelos quais os ataques de engenharia social são eficazes incluem:
 
 - Urgência: Um agente de ameaças persuade os outros a responder rapidamente e sem questionar.
 
-### Módulo 3: Proteger-se contra ameaças, riscos e vunerabilidades
+### Modulo 3: Proteger-se contra ameaças, riscos e vunerabilidades
 
 #### Controles, frameworks e conformidade
 
@@ -249,7 +259,7 @@ Como os contra-ataques são geralmente desaprovados ou ilegais, a área de segur
 
 Como exemplo, considere a **Lei de Portabilidade e Responsabilidade de Seguros de Saúde (HIPAA)**, que é uma lei federal dos EUA estabelecida para proteger as informações de saúde dos pacientes, também conhecidas como PHI, ou informações de saúde protegidas. Essa lei proíbe que as informações dos pacientes sejam compartilhadas sem o consentimento deles. Portanto, como profissional de segurança, você pode ajudar a garantir que a organização para a qual trabalha cumpra a obrigação legal e ética de informar os pacientes sobre uma violação, caso seus dados de saúde sejam expostos.
 
-### Módulo 4: Ferramentas de segurança cibernética e linguagens de programação
+### Modulo 4: Ferramentas de segurança cibernética e linguagens de programação
 
 #### Ferramentas para proteger as operações comerciais
 
@@ -319,3 +329,193 @@ Observação: a codificação e a criptografia têm finalidades diferentes. A co
 
 ##### Teste de penetração
 O teste de penetração, também chamado de pen testing, é o ato de participar de um ataque simulado que ajuda a identificar vulnerabilidades em sistemas, redes de computadores, sites, aplicativos e processos. É uma Avaliação de risco completa que pode avaliar e identificar ameaças externas e internas, bem como pontos fracos.
+
+## Jogar com segurança: Gerencie os riscos de segurança
+
+### Modulo 1: Domínios de Segurança
+
+#### Domínios de segurança que os analistas de segurança cibernética precisam conhecer
+
+##### Domínio um: Gerenciamento de segurança e de riscos
+
+Todas as organizações devem desenvolver sua postura de segurança. A postura de segurança é a capacidade da organização de gerenciar sua defesa de recursos e dados críticos e reagir a mudanças. Os elementos do domínio de gerenciamento de segurança e de riscos que afetam a postura de segurança de uma organização incluem:
+
+- Objetivos e metas de segurança
+
+- Processos de redução de riscos
+
+- Conformidade
+
+- Planos de continuidade de negócios
+
+- Reguladores legais
+
+- Ética profissional e organizacional
+
+A segurança das informações, ou InfoSec, também está relacionada a esse domínio e refere-se a um conjunto de processos estabelecidos para proteger as informações. Uma organização pode usar manuais e implementar treinamentos como parte de seu programa de segurança e Gerenciamento de Riscos, com base em suas necessidades e no risco percebido. Há muitos processos de design de InfoSec, tais como
+
+- Resposta a incidentes
+
+- Gerenciamento de vulnerabilidade
+
+- Segurança de aplicativos
+
+- Segurança na nuvem
+
+- Segurança da infraestrutura
+
+Como exemplo, uma equipe de segurança pode precisar alterar a forma como as informações de identificação pessoal (PII) são tratadas para aderir ao Regulamento Geral de Proteção de Dados (GDPR) da União Europeia.
+
+##### Segundo domínio: Segurança de recursos
+
+A segurança de ativos envolve o gerenciamento de processos de segurança cibernética de recursos organizacionais, incluindo o armazenamento, a manutenção, a retenção e a destruição de dados físicos e virtuais. Como a perda ou o roubo de recursos pode expor uma organização e aumentar o nível de risco, é essencial manter o controle dos recursos e dos dados que eles contêm. A realização de uma análise de impacto na segurança, o estabelecimento de um plano de recuperação de dados e o Gerenciamento da exposição ao risco dos dados dependerão do nível de risco associado a cada recurso. Os analistas de segurança talvez precisem armazenar, manter e reter dados criando backups para garantir que sejam capazes de restaurar o ambiente se um incidente de segurança colocar os dados da organização em risco.
+
+##### Domínio três: Arquitetura e engenharia de segurança
+
+Esse domínio se concentra no Gerenciamento da segurança de dados. Garantir a implementação de ferramentas, sistemas e processos eficazes ajuda a proteger os recursos e os dados de uma organização. Os arquitetos e engenheiros de segurança criam esses processos.
+
+Um aspecto importante desse domínio é o conceito de responsabilidade compartilhada. Responsabilidade compartilhada significa que todos os indivíduos envolvidos assumem uma função ativa na redução do risco durante o design de um sistema de segurança. Outros princípios de projeto relacionados a esse domínio, que serão discutidos posteriormente no programa, incluem:
+
+- Modelo de ameaças
+
+- Menor privilégio
+
+- Defesa em profundidade
+
+- Falha segura
+
+- Separação de tarefas
+
+- Manter a simplicidade
+
+- Confiança zero
+
+- Confiar, mas verificar
+
+Um exemplo de gerenciamento de dados é o uso de uma ferramenta de gerenciamento de eventos e informações de segurança (SIEM) para monitorar sinalizadores relacionados a login incomum ou atividade de usuário que possa indicar que um agente de ameaça está tentando acessar dados privados.
+
+##### Domínio quatro: Comunicação e segurança de rede
+
+Este domínio concentra-se no gerenciamento e na segurança de redes físicas e comunicações sem fio. Isso inclui comunicações no local, remotas e na Nuvem.
+
+As organizações com ambientes de trabalho remoto, híbrido e no local devem garantir que os dados permaneçam seguros, mas o Gerenciamento de conexões externas para garantir que os funcionários remotos acessem com segurança as redes de computadores de uma organização é um desafio. A criação de controles de segurança de rede - como acesso restrito à rede - pode ajudar a proteger os usuários e garantir que a rede da organização permaneça segura quando os funcionários viajam ou trabalham fora do escritório principal. 
+
+##### Domínio cinco: Gerenciamento de identidade e acesso
+
+O domínio Gerenciamento de identidade e acesso (IAM) concentra-se em manter a Segurança de dados. Ele faz isso garantindo que as identidades dos usuários sejam confiáveis e autenticadas e que o acesso aos recursos físicos e lógicos seja autorizado. Isso ajuda a evitar usuários não autorizados e, ao mesmo tempo, permite que os usuários autorizados realizem suas tarefas.
+
+Essencialmente, o IAM usa o que é chamado de princípio de privilégio mínimo, que é o conceito de conceder apenas o acesso e a autorização mínimos necessários para concluir uma tarefa. Por exemplo, um analista de segurança cibernética pode ser solicitado a garantir que os representantes do Atendimento ao Cliente só possam visualizar os dados privados de um cliente, como seu número de telefone, enquanto trabalham para resolver o problema do cliente; em seguida, remova o acesso quando o problema do cliente for resolvido.
+
+##### Domínio seis: avaliação e teste de segurança
+
+O domínio de avaliação e teste de segurança concentra-se na identificação e redução de riscos, ameaças e vulnerabilidades. As avaliações de segurança ajudam as organizações a determinar se seus sistemas internos estão seguros ou em risco. As organizações podem empregar testadores de penetração, geralmente chamados de "pen testers", para encontrar vulnerabilidades que poderiam ser exploradas por um agente de ameaças.
+
+Esse domínio sugere que as organizações realizem testes de controle de segurança, além de coletar e analisar dados. Além disso, ele enfatiza a importância de realizar auditorias de segurança para monitorar e reduzir a Probabilidade de Violação de dados. Para contribuir com esses tipos de tarefas, os profissionais de segurança cibernética podem ser encarregados de auditar as permissões dos usuários para validar se eles têm os níveis corretos de acesso aos sistemas internos.
+
+##### Sétimo domínio: Operações de segurança
+
+O domínio de operações de segurança concentra-se na investigação de uma possível Violação de dados e na implementação de medidas preventivas após a ocorrência de um incidente de segurança. Isso inclui o uso de estratégias, processos e ferramentas, tais como
+
+- Treinamento e conscientização
+
+- Relatórios e documentação
+
+- Detecção e prevenção de intrusões
+
+- Ferramentas SIEM
+
+- Gerenciamento de registros
+
+- Gerenciamento de incidentes
+
+- Playbooks
+
+- Análise forense pós-violação
+
+- Reflexão sobre as Lições aprendidas
+
+Os profissionais de segurança cibernética envolvidos nesse domínio trabalham em equipe para gerenciar, prevenir e investigar ameaças, riscos e vulnerabilidades. Esses indivíduos são treinados para lidar com ataques ativos, como grandes quantidades de dados sendo acessados da rede interna de uma organização, fora do horário normal de trabalho. Depois que uma ameaça é identificada, a equipe trabalha diligentemente para manter os dados e as informações privadas a salvo dos agentes da ameaça.
+
+##### Oitavo domínio: Segurança de desenvolvimento de software
+
+O domínio de segurança de desenvolvimento de software se concentra no uso de práticas e diretrizes de programação segura para criar aplicativos seguros. Ter aplicativos seguros ajuda a fornecer serviços seguros e confiáveis, o que ajuda a proteger as organizações e seus usuários.
+
+A segurança deve ser incorporada a cada elemento do ciclo de vida de desenvolvimento de software (SDLC), desde o projeto e o desenvolvimento até o teste e a liberação. Para obter segurança, o processamento do desenvolvimento de software deve ter a segurança em mente em cada etapa. A segurança não pode ser uma reflexão tardia.
+
+A realização de testes de segurança de aplicativos pode ajudar a garantir que as vulnerabilidades sejam identificadas e mitigadas adequadamente. É necessário ter um sistema para testar as convenções de programação, os executáveis de software e as medidas de segurança incorporadas ao software. Ter profissionais de garantia de qualidade e de teste de caneta para garantir que o software atenda aos padrões de segurança e desempenho também é uma parte essencial do processo de desenvolvimento de software. Por exemplo, um analista de nível básico que trabalha para uma empresa farmacêutica pode ser solicitado a garantir que a criptografia esteja configurada corretamente para um novo dispositivo médico que armazenará dados privados de pacientes.
+
+#### Gerenciar ameaças, riscos e vulnerabilidades comuns
+
+##### Gerenciamento de riscos
+
+Um dos principais objetivos das organizações é proteger os recursos. Um recurso é um item percebido como tendo valor para uma organização. Os recursos podem ser digitais ou físicos. Exemplos de recursos digitais incluem as informações pessoais de funcionários, clientes ou Fornecedores, tais como
+
+- Números de Seguro Social (SSNs) ou números de identificação nacional únicos atribuídos a indivíduos
+- Datas de nascimento
+- Números de contas bancárias
+- Endereços de correspondência
+
+Exemplos de recursos físicos incluem:
+
+- Quiosques de pagamento
+- Servidores
+- Computadores de mesa
+- Espaços de escritório
+
+Algumas estratégias comuns usadas para gerenciar riscos incluem:
+
+- **Aceitação**: Aceitar um Risco para evitar a interrupção da continuidade dos negócios
+- **Evitar**: Criação de um planejamento para evitar totalmente o risco
+- **Transferência**: Transferir o risco para um terceiro gerenciar
+- **Mitigação**: Diminuição do impacto de um risco conhecido
+
+Além disso, as organizações implementam processos de gerenciamento de riscos com base em frameworks amplamente aceitos para ajudar a proteger os recursos digitais e físicos de várias ameaças, riscos e vulnerabilidades. Exemplos de frameworks comumente usados no setor de segurança cibernética incluem o National Institute of Standards and Technology Risco Management Framework (NIST RMF) e a Health Informações Trust Alliance (HITRUST).
+
+Seguem alguns tipos comuns de ameaças, riscos e vulnerabilidades que você ajudará as organizações a gerenciar como profissional de segurança.
+
+##### Ameaças, Riscos e Vulnerabilidades mais comuns da atualidade
+
+###### Ameaças
+
+Uma **ameaça** é qualquer circunstância ou evento que possa afetar negativamente os recursos. AS Como analista de segurança de nível básico, seu trabalho é ajudar a defender os recursos da organização contra ameaças internas e externas. Portanto, compreender os tipos comuns de ameaças é importante para o trabalho diário de um analista. Para relembrar, as ameaças comuns incluem:
+
+- Ameaças internas: Membros da equipe ou Fornecedores abusam de seu acesso autorizado para obter dados que podem prejudicar a organização.
+- Ameaças persistentes avançadas (APTs): Um agente de ameaça mantém o acesso não autorizado a um sistema por um longo período de tempo.
+
+###### Riscos
+
+Um **risco** é qualquer coisa que possa afetar a confidencialidade, a integridade ou a disponibilidade de um recurso. Uma fórmula básica para determinar o nível de risco é que o risco é igual à probabilidade de uma ameaça. Uma maneira de pensar sobre isso é que um risco é chegar atrasado ao trabalho e as ameaças são o Tráfego, um acidente, um pneu furado, etc.
+
+Há diferentes fatores que podem afetar a probabilidade de um risco para os recursos de uma organização, incluindo
+
+- Risco externo: Qualquer coisa fora da organização que tenha o potencial de prejudicar os recursos organizacionais, como agentes de ameaças que tentam obter acesso a informações privadas
+- Risco interno: Um funcionário, fornecedor ou parceiro de confiança, atual ou antigo, que represente um Risco de segurança
+- Sistemas legados: Sistemas antigos que podem não ser contabilizados ou atualizados, mas que ainda podem impactar os recursos, como estações de trabalho ou sistemas antigos de mainframe. Por exemplo, uma organização pode ter uma máquina de venda automática antiga que aceita pagamentos com cartão de crédito ou uma estação de trabalho que ainda esteja conectada ao sistema de contabilização legado.
+- Risco de várias partes: A terceirização do trabalho para Fornecedores terceirizados pode lhes dar acesso à propriedade intelectual, como segredos comerciais, projetos de software e invenções.
+- Conformidade/licenciamento de software: Software que não está atualizado ou em conformidade, ou patches que não são instalados em tempo hábil
+
+Há muitos recursos, como o NIST, que fornecem listas de riscos de segurança cibernética. Além disso, o Projeto de Segurança de Aplicativos da Web Aberta (OWASP) publica um documento de conscientização padrão sobre os 10 principais riscos de segurança mais críticos para aplicativos da Web, que é atualizado regularmente. 
+
+Observação: a lista de tipos de ataque comuns do OWASP contém três novos riscos para os anos de 2017 a 2021: design inseguro, falhas na integridade do software e dos dados e falsificação de solicitações do lado do servidor. Essa atualização enfatiza o fato de que a segurança é um Campo em constante evolução. Ela também demonstra a importância de se manter atualizado sobre as táticas e técnicas atuais dos agentes de ameaças, para que você possa estar mais bem preparado para gerenciar esses tipos de riscos.
+
+![Gerenciamento de Riscos](./public/img/grafico_gerenciamento_riscos.png)
+
+##### Vulnerabilidades
+
+Uma **vulnerabilidade** é um ponto fraco que pode ser explorado por uma ameaça. Portanto, as organizações precisam inspecionar regularmente as vulnerabilidades em seus sistemas. Algumas vulnerabilidades incluem:
+
+- **ProxyLogon**: Uma vulnerabilidade pré-autenticada que afeta o servidor Microsoft Exchange. Isso significa que um agente de ameaça pode concluir um processamento de autenticação de usuário para implantar um código malicioso de um local remoto.
+
+- **ZeroLogon**: Uma vulnerabilidade no protocolo de autenticação Netlogon da Microsoft. Um protocolo de autenticação é uma forma de verificar a identidade de uma pessoa. O Netlogon é um serviço que garante a identidade de um usuário antes de permitir o acesso ao local de um site.
+
+- **Log4Shell**: Permite que os atacantes executem programação Java no computador de outra pessoa ou vazem informações confidenciais. Ele faz isso permitindo que um ataque remoto assuma o controle de dispositivos conectados à Internet e execute códigos maliciosos.
+
+- **PetitPotam**: Afeta o NTLM (New Technology Local Area Rede) Manager (Gerenciador de rede local) do Windows. É uma técnica de roubo que permite que um ataque baseado em LAN inicie uma solicitação de autenticação.
+
+- **Falhas na geração de registros e monitoramento de segurança**: Recursos insuficientes de geração de registros e monitoramento que fazem com que os atacantes explorem vulnerabilidades sem que a organização saiba
+
+- **Falsificação de solicitação no lado do servidor**: Acessível para que os atacantes manipulem um aplicativo do lado do servidor para acessar e atualizar recursos de backend. Também pode permitir que os agentes de ameaças roubem dados.
+
+Como analista de segurança de nível básico, você pode trabalhar no gerenciamento de vulnerabilidades, que é o monitoramento de um sistema para identificar e mitigar vulnerabilidades. Embora possam existir patches e atualizações, se eles não forem aplicados, ainda podem ocorrer intrusões. Por esse motivo, o monitoramento constante é importante. Quanto mais cedo uma organização identificar uma vulnerabilidade e abordá-la aplicando patches ou atualizando seus sistemas, mais cedo ela poderá ser mitigada, reduzindo a exposição da organização à vulnerabilidade. 
+
+Para saber mais sobre as vulnerabilidades explicadas nesta seção de leitura, bem como sobre outras vulnerabilidades, explore o Banco de Dados de Vulnerabilidades Nacionais do NIST e o Catálogo de Vulnerabilidades Exploradas Conhecidas da CISA.
