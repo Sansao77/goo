@@ -519,3 +519,183 @@ Uma **vulnerabilidade** é um ponto fraco que pode ser explorado por uma ameaça
 Como analista de segurança de nível básico, você pode trabalhar no gerenciamento de vulnerabilidades, que é o monitoramento de um sistema para identificar e mitigar vulnerabilidades. Embora possam existir patches e atualizações, se eles não forem aplicados, ainda podem ocorrer intrusões. Por esse motivo, o monitoramento constante é importante. Quanto mais cedo uma organização identificar uma vulnerabilidade e abordá-la aplicando patches ou atualizando seus sistemas, mais cedo ela poderá ser mitigada, reduzindo a exposição da organização à vulnerabilidade. 
 
 Para saber mais sobre as vulnerabilidades explicadas nesta seção de leitura, bem como sobre outras vulnerabilidades, explore o Banco de Dados de Vulnerabilidades Nacionais do NIST e o Catálogo de Vulnerabilidades Exploradas Conhecidas da CISA.
+
+### Modulo 2: Frameworks e controles de segurança
+
+#### A relação entre frameworks e controles
+
+**As estruturas de segurança** são diretrizes usadas para criar planos que ajudem a reduzir os riscos e as ameaças à privacidade dos dados. As frameworks apoiam a capacidade das organizações de aderir às leis e aos regulamentos de conformidade. Por exemplo, o setor de saúde usa frameworks para cumprir a HIPAA (Health Insurance Portability and Responsabilidade Act) dos Estados Unidos, que exige que os profissionais médicos mantenham as informações dos pacientes seguras. 
+
+**Os controles de segurança** são proteções criadas para reduzir riscos específicos à segurança. Os controles de segurança são as medidas que as organizações usam para reduzir os riscos e as ameaças aos dados e à privacidade dos dados. Por exemplo, um controle que pode ser usado juntamente com os frameworks para garantir que um hospital permaneça em conformidade com a HIPAA é exigir que os pacientes usem a Autenticação multifator (MFA) para acessar seus registros médicos. Usar uma medida como a MFA para validar a identidade de alguém é uma maneira de ajudar a reduzir os possíveis riscos e ameaças aos dados privados.
+
+##### Frameworks e controles específicos
+
+Há muitos frameworks e controles diferentes que as organizações podem usar para permanecer em conformidade com os Reguladores e atingir suas metas de segurança. Os frameworks abordados nesta leitura são o Cyber Threat Framework (CTF) e a International Organization for Standardization/International Electrotechnical Commission (ISO/IEC) 27001. Vários controles de segurança comuns, usados juntamente com esses tipos de frameworks, também são explicados.
+
+###### Framework de Ameaça Cibernética (CTF)
+
+De acordo com o Escritório do Diretor de Inteligência Nacional, o CTF foi desenvolvido pelo governo dos EUA para fornecer "uma linguagem comum para descrever e comunicar informações sobre a atividade de ameaças cibernéticas" Ao fornecer uma linguagem comum para comunicar informações sobre a atividade de ameaças, o CTF ajuda os profissionais de segurança cibernética a analisar e compartilhar informações com mais eficiência. Isso permite que as organizações melhorem sua resposta ao cenário de segurança cibernética em constante evolução e às diversas táticas e técnicas dos agentes de ameaças.
+
+###### Organização Internacional de Padronização/Comissão Eletrotécnica Internacional (ISO/IEC) 27001
+
+Um framework internacionalmente reconhecido e usado é o ISO/IEC 27001. A família de padrões ISO 27000 permite que organizações de todos os setores e tamanhos gerenciem a segurança de recursos, como informações financeiras, propriedade intelectual, dados de funcionários e informações confiadas a terceiros. Essa framework descreve os requisitos de um sistema de gerenciamento de segurança da informação, as práticas recomendadas e os controles que apoiam a capacidade da organização de gerenciar riscos. Embora a framework ISO/IEC 27001 não exija o uso de controles específicos, ela fornece um conjunto de controles que as organizações podem usar para melhorar sua postura de segurança. 
+
+###### Controles
+
+Os controles são usados juntamente com as estruturas para reduzir a possibilidade e o impacto de uma ameaça, risco ou vulnerabilidade à segurança. Os controles podem ser físicos, técnicos e administrativos e, normalmente, são usados para prevenir, detectar ou corrigir problemas de segurança.
+
+Exemplos de controles físicos:
+
+- Portões, cercas e travas
+- Guardas de segurança
+- Circuito fechado de televisão (CCTV), câmeras de vigilância e detectores de movimento
+- Cartões de acesso ou crachás para entrar em espaços de escritórios
+
+Exemplos de controles técnicos:
+
+- Firewalls
+- MFA (Autenticação Multifator)
+- Software antivírus
+
+Exemplos de controles administrativos:
+
+- Separação de tarefas
+- Autorização
+- Classificação de recursos
+
+Para saber mais sobre controles, especialmente aqueles usados para proteger recursos relacionados à saúde contra diversos tipos de ameaças, leia a apresentação Controle de acesso físico do U.S. Department of Health and Human Services.
+
+#### Use a tríade CIA para proteger as organizações
+
+##### A tríade CIA para analistas
+
+A **tríade CIA** é um modelo que ajuda a informar como as organizações consideram o risco ao configurar sistemas e políticas de segurança. Ela é composta por três elementos que os analistas de segurança cibernética e as organizações trabalham para manter: confidencialidade, integridade e disponibilidade. Manter um nível aceitável de risco e garantir que os sistemas e as políticas sejam projetados com esses elementos em mente ajuda a estabelecer uma **postura de segurança** bem-sucedida, que se refere à capacidade de uma organização de gerenciar a defesa de recursos e dados críticos e reagir a mudanças.
+
+###### Confidencialidade
+
+**Confidencialidade** é a ideia de que somente usuários autorizados podem acessar recursos ou dados específicos. Em uma organização, a confidencialidade pode ser aprimorada por meio da implementação de princípios de design, como o princípio do privilégio mínimo. O princípio do privilégio mínimo limita o acesso dos usuários apenas às informações necessárias para realizar tarefas relacionadas ao trabalho. Limitar o acesso é uma forma de manter a confidencialidade e a segurança dos dados privados.
+
+###### Integridade
+
+**Integridade** dos dados é a ideia de que os dados são comprovadamente corretos, autênticos e confiáveis. É essencial ter protocolos em vigor para verificar a autenticação dos dados. Uma maneira de verificar a Integridade dos dados é por meio da
+criptografia, que é usada para transformar os dados de modo que partes não autorizadas não possam lê-los ou adulterá-los (NIST, 2022). Outro exemplo de como uma organização pode implementar a integridade é ativar a criptografia, que é o processamento da conversão de dados de um formato legível em um formato codificado. A criptografia pode ser usada para impedir o acesso e garantir que os dados, como mensagens na plataforma de bate-papo interna de uma organização, não possam ser adulterados.
+
+###### Disponibilidade
+
+**Disponibilidade** é a ideia de que os dados são acessíveis àqueles que estão autorizados a usá-los. Quando um sistema adere aos princípios de disponibilidade e confidencialidade, os dados podem ser usados quando necessário. No local de trabalho, isso pode significar que a organização permite que funcionários remotos acessem sua rede interna para realizar seus trabalhos. É importante observar que o acesso aos dados na rede interna ainda é LIMIT, dependendo do tipo de acesso que os funcionários precisam para realizar seu trabalho. Se, por exemplo, um funcionário trabalha no departamento de contabilização da organização, ele pode precisar de acesso a contas corporativas, mas não a dados relacionados a projetos de desenvolvimento em andamento.
+
+#### Mais sobre os princípios de segurança da OWASP
+
+##### Princípios de segurança
+
+No local de trabalho, os princípios de segurança estão incorporados em suas tarefas diárias. Quer esteja analisando logs, monitorando um painel de gerenciamento de eventos e informações de segurança (SIEM) ou usando uma 
+verificação de vulnerabilidades, você usará esses princípios de alguma forma.
+
+Anteriormente, você foi apresentado a vários princípios de segurança da OWASP. Esses princípios incluem:
+
+- Minimizar a superfície de ataque: A superfície de ataque refere-se a todas as possíveis vulnerabilidades que um agente de ameaças poderia explorar.
+
+- Princípio do privilégio mínimo: Os usuários têm a menor quantidade de acesso necessária para realizar suas tarefas diárias.
+
+- Defesa em profundidade: As organizações devem ter vários controles de segurança que atenuem os riscos e as ameaças.
+
+- Separação de tarefas: As ações críticas devem depender de várias pessoas, cada uma das quais deve seguir o princípio do privilégio mínimo.
+
+- Mantenha a segurança simples: Evite soluções desnecessariamente complicadas. A complexidade dificulta a segurança.
+
+- Corrija os problemas de segurança corretamente: Quando ocorrerem incidentes de segurança, identifique a causa raiz, contenha o impacto, identifique as vulnerabilidades e realize testes para garantir que a correção seja bem-sucedida.
+
+##### Princípios adicionais de segurança da OWASP
+
+A seguir, você conhecerá outros quatro princípios de segurança da OWASP que os analistas de segurança cibernética e suas equipes usam para manter as operações organizacionais e as pessoas seguras.
+
+###### Estabelecer padrões seguros
+
+Esse princípio significa que o estado de segurança ideal de um aplicativo também é o estado padrão para os usuários; deve ser necessário um trabalho extra para tornar o aplicativo inseguro.
+
+###### Falhar com segurança
+
+Falhar com segurança significa que, quando um controle falha ou é interrompido, ele deve fazer isso usando como padrão a sua opção mais segura. Por exemplo, quando um firewall falha, ele deve simplesmente fechar todas as conexões e bloquear todas as novas, em vez de começar a aceitar tudo.
+
+###### Não confie nos serviços
+
+Muitas organizações trabalham com parceiros terceirizados. Esses parceiros externos geralmente têm políticas de segurança diferentes das da organização. E a organização não deve confiar explicitamente que os sistemas de seus parceiros são seguros. Por exemplo, se um fornecedor terceirizado rastreia pontos de recompensa para clientes de companhias aéreas, a companhia aérea deve garantir que o saldo seja preciso antes de compartilhar essas informações com seus clientes.
+
+###### Evite a segurança por obscuridade
+
+A segurança dos principais sistemas não deve se basear em manter os detalhes ocultos. Considere o seguinte exemplo da OWASP (2016): OWASP Mobile Top 10
+
+A segurança de um aplicativo não deve depender da manutenção do código-fonte em segredo. Sua segurança deve depender de muitos outros fatores, incluindo políticas de senha razoáveis, defesa em profundidade, limites de transações comerciais, Arquitetura de rede sólida e controles de fraude e auditoria.
+
+#### Mais informações sobre auditorias de segurança
+
+##### Auditorias de segurança
+
+Uma **auditoria de segurança** é uma revisão dos controles, políticas e procedimentos de segurança de uma organização em relação a um conjunto de expectativas. As auditorias são revisões independentes que avaliam se uma organização está atendendo a critérios internos e externos. Os critérios internos incluem políticas, procedimentos e práticas recomendadas delineadas. Os critérios externos incluem conformidade regulatória, leis e normas federais. 
+
+Além disso, uma auditoria de segurança pode ser usada para avaliar os controles de segurança estabelecidos por uma organização. Os **controles de segurança** são salvaguardas projetadas para reduzir riscos de segurança específicos.
+
+As auditorias ajudam a garantir que sejam feitas verificações de segurança (ou seja, monitoramento diário de painéis de gerenciamento de eventos e informações de segurança) para identificar ameaças, riscos e vulnerabilidades. Isso ajuda a manter a postura de segurança de uma organização. E, se houver problemas de segurança, um processamento de correção deve estar em vigor.
+
+##### Objetivos e metas de uma auditoria
+
+A meta de uma auditoria é garantir que as práticas de tecnologia da informação (TI) de uma organização atendam aos padrões organizacionais e do setor. O Objetivo é identificar e abordar áreas de correção e crescimento. As auditorias fornecem orientação e clareza, identificando quais são as falhas atuais e desenvolvendo um plano para corrigi-las.
+
+As auditorias de segurança devem ser realizadas para proteger os dados e evitar penalidades e multas de agências governamentais. A Frequência das auditorias depende das leis locais e dos Regulamentos Federais de Conformidade.
+
+##### Fatores que afetam as auditorias
+Os fatores que determinam os tipos de auditorias que uma organização implementa incluem:
+
+- Tipo de setor
+
+- Tamanho da organização
+
+- Vínculos com as regulamentações governamentais aplicáveis
+
+- A localização geográfica de uma empresa
+
+- Uma decisão comercial de aderir a uma conformidade regulatória específica
+
+Para analisar os regulamentos de conformidade comuns que diferentes organizações precisam cumprir, consulte 
+a [leitura sobre controles, frameworks e conformidade](#controles-frameworks-e-conformidade).
+
+##### Função das estruturas e dos controles nas auditorias
+
+Juntamente com a conformidade, é importante mencionar a função das estruturas e dos controles nas auditorias de segurança. Estruturas como a National Institute of Standards and Technology Cybersecurity Framework (NIST CSF) e a série de normas internacionais de segurança da informação (ISO 27000) foram criadas para ajudar as organizações a se prepararem para auditorias de segurança de conformidade regulamentar. Ao aderir a essas e outras frameworks relevantes, as organizações podem economizar tempo ao realizar auditorias externas e internas. Além disso, as frameworks, quando usadas juntamente com os controles, podem apoiar a capacidade das organizações de se alinharem aos Requisitos e padrões de conformidade regulamentar. 
+
+Há três categorias principais de controles a serem analisados durante uma auditoria, que são os controles administrativos e/ou gerenciais, técnicos e físicos. Para saber mais sobre os controles específicos relacionados a cada categoria, clique no link a seguir e selecione "Usar modelo".
+
+Link para o modelo: [Categorias de controle](./public/docs/Control-categories.docx)
+
+##### Lista de verificação de auditoria
+
+É necessário criar uma lista de verificação de auditoria antes de realizar uma auditoria. Uma lista de verificação geralmente é composta pelas seguintes áreas de foco:
+
+###### Identificar o escopo da auditoria
+
+- A auditoria deve:
+
+    - Listar os recursos que serão avaliados (por exemplo, se os firewalls estão configurados corretamente, se os PII estão seguros, se os recursos físicos estão trancados etc.)
+
+    - Observar como a auditoria ajudará a organização a atingir seus objetivos desejados
+
+    - Indicar a frequência com que a auditoria deve ser realizada
+
+    - Inclua uma Avaliação das políticas, protocolos e procedimentos organizacionais para garantir que estejam funcionando como pretendido e sendo implementados pelos funcionários
+
+###### Avaliação de risco
+
+- Uma Avaliação de risco é usada para avaliar os riscos organizacionais identificados relacionados a orçamento, controles, processos internos e normas externas (ou seja, Reguladores).
+
+###### Conduzir a auditoria
+
+- Ao realizar uma auditoria interna, você avaliará a segurança dos recursos identificados e listados no escopo da auditoria.
+
+###### Crie um plano de mitigação
+
+- Um plano de mitigação é uma estratégia estabelecida para reduzir o nível de risco e os possíveis custos, penalidades ou outros problemas que possam afetar negativamente a postura de segurança da organização.
+
+###### Comunicar os resultados às partes interessadas
+
+- O resultado final desse processamento é o fornecimento de um relatório detalhado das descobertas, das melhorias sugeridas necessárias para reduzir o nível de risco da organização e dos Regulamentos e padrões de conformidade que a organização precisa cumprir. 
+
