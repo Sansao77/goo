@@ -699,3 +699,113 @@ Link para o modelo: [Categorias de controle](./public/docs/Control-categories.do
 
 - O resultado final desse processamento é o fornecimento de um relatório detalhado das descobertas, das melhorias sugeridas necessárias para reduzir o nível de risco da organização e dos Regulamentos e padrões de conformidade que a organização precisa cumprir. 
 
+### Modulo 3: Introdução às ferramentas de segurança cibernética
+
+#### Ferramentas SIEM
+
+##### Soluções SIEM atuais
+
+Uma ferramenta **SIEM** (ferramentas de gerenciamento de eventos e informações de segurança) é um aplicativo que coleta e analisa dados de registros para monitorar atividades críticas em uma organização. As ferramentas SIEM oferecem monitoramento e acompanhamento em tempo real de registros de eventos de segurança. Os dados são usados para realizar uma análise completa de qualquer ameaça potencial à segurança, risco ou vulnerabilidade identificados. As ferramentas SIEM têm muitas opções de painéis. Cada opção de painel ajuda os Membros da equipe de segurança cibernética a gerenciar e monitorar os dados organizacionais. Entretanto, atualmente, as ferramentas SIEM exigem interação humana para a análise de eventos de segurança.
+
+##### O futuro das ferramentas SIEM
+
+Como a segurança cibernética continua a evoluir, a necessidade de funcionalidade em Nuvem aumentou. As ferramentas SIEM evoluíram e continuam evoluindo para funcionar em ambientes hospedados na nuvem e nativos da nuvem. As ferramentas SIEM hospedadas na nuvem são operadas por Fornecedores que são responsáveis por manter e gerenciar a infraestrutura necessária para usar as ferramentas. As ferramentas hospedadas na Nuvem são simplesmente acessadas pela Internet e são uma solução ideal para organizações que não querem investir na criação e manutenção de sua própria infraestrutura.
+
+Acessível às ferramentas SIEM hospedadas na nuvem, as ferramentas SIEM nativas da nuvem também são totalmente mantidas e gerenciadas pelos Fornecedores e acessadas pela Internet. No entanto, as ferramentas nativas da nuvem são projetadas para aproveitar ao máximo os recursos de computação em nuvem, como disponibilidade, flexibilidade e escalonabilidade.
+
+Ainda assim, espera-se que a evolução das ferramentas SIEM continue a fim de acomodar a natureza mutável da tecnologia, bem como as novas táticas e técnicas dos agentes de ameaças. Por exemplo, considere o desenvolvimento atual de dispositivos interconectados com acesso à Internet, conhecido como Internet das Coisas (IoT). Quanto mais dispositivos interconectados houver, maior será a superfície de ataque à segurança cibernética e a quantidade de dados que os agentes de ameaças podem exploit. Espera-se que a diversidade de ataques e dados que exigem atenção especial aumente significativamente. Além disso, à medida que a inteligência artificial (IA) e a tecnologia de aprendizado de máquina (ML) continuarem a progredir, os recursos do SIEM serão aprimorados para identificar melhor a terminologia relacionada a ameaças, a visualização de painéis e a função de armazenamento de dados.
+
+A implementação da automação também ajudará as equipes de segurança a responder mais rapidamente a possíveis incidentes, realizando muitas ações sem esperar por uma resposta humana. **A orquestração, automação e resposta de segurança (SOAR)** é um conjunto de aplicativos, ferramentas e Fluxos de trabalho que usa a automação para responder a eventos de segurança. Essencialmente, isso significa que o processamento de incidentes comuns relacionados à segurança com o uso de ferramentas SIEM deverá se tornar um processo mais simplificado, exigindo menos intervenção manual. Isso libera os analistas de segurança para lidar com incidentes mais complexos e incomuns que, consequentemente, não podem ser automatizados com um SOAR. No entanto, a expectativa é que as plataformas relacionadas à segurança cibernética se comuniquem e interajam umas com as outras. Embora a tecnologia que permite que sistemas e dispositivos interconectados se comuniquem entre si exista, ela ainda é um trabalho em andamento.
+
+#### Mais sobre ferramentas de segurança cibernética
+
+##### Ferramentas de código aberto
+
+As ferramentas de código aberto geralmente são de uso gratuito e podem ser fáceis de usar. O objetivo das ferramentas de código aberto é fornecer aos usuários um software criado pelo público de forma colaborativa, o que pode fazer com que o software seja mais seguro. Além disso, as ferramentas de código aberto permitem maior personalização pelos usuários, resultando em uma variedade de novos serviços criados a partir do mesmo pacote de software de código aberto.
+
+Os engenheiros de software criam projetos de código aberto para aprimorar o software e torná-lo disponível para uso de qualquer pessoa, desde que a licença especificada seja respeitada. O código-fonte dos projetos de código aberto está prontamente disponível para os usuários, assim como o material de treinamento que os acompanha. Ter essas fontes prontamente disponíveis permite que os usuários modifiquem e aprimorem os materiais do projeto.
+
+##### Ferramentas proprietárias
+
+As ferramentas proprietárias são desenvolvidas e pertencem a uma pessoa ou empresa, e os usuários geralmente pagam uma taxa pelo uso e pelo treinamento. Os proprietários das ferramentas proprietárias são os únicos que podem acessar e modificar o código-fonte. Isso significa que os usuários geralmente precisam esperar que sejam feitas atualizações no software e, às vezes, podem precisar pagar uma taxa por essas atualizações. O software proprietário geralmente permite que os usuários modifiquem um número LIMIT de recursos para atender às necessidades individuais e organizacionais. Exemplos de ferramentas proprietárias incluem as ferramentas SIEM Splunk® e Google SecOps (Chronicle).
+
+###### Equívocos comuns
+
+Há uma concepção errônea comum de que as ferramentas de código aberto são menos eficazes e não são tão seguras de usar quanto as ferramentas proprietárias. No entanto, os desenvolvedores vêm criando materiais de código aberto há anos que se tornaram padrões do setor. Embora seja verdade que os agentes de ameaças tenham tentado manipular as ferramentas de código aberto, como essas ferramentas são de código aberto, é realmente mais difícil para as pessoas mal-intencionadas causarem danos com sucesso. A ampla exposição e o acesso imediato ao código-fonte por usuários e profissionais bem-intencionados e informados tornam menos provável a ocorrência de problemas, pois eles podem corrigi-los assim que forem identificados.
+
+##### Exemplos de ferramentas de código aberto
+
+Em segurança, há muitas ferramentas em uso que são de código aberto e comumente disponíveis. Dois exemplos são o Linux e o Suricata.
+
+###### Linux
+
+O Linux é um sistema operacional de código aberto amplamente utilizado. Ele permite que você adapte o sistema operacional às suas necessidades usando uma interface de Linha de Comando (CLI). Um sistema operacional é a interface entre o hardware do computador e o usuário. É usado para se comunicar com o hardware de um computador e gerenciar aplicativos de software.
+
+Há várias versões do Linux que existem para realizar tarefas específicas. O Linux e sua interface de Linha de Comando (CLI) serão discutidos em detalhes posteriormente no programa de certificação.
+
+###### Suricata
+
+O Suricata é um software de código aberto de análise de rede e detecção de ameaças, usado para inspecionar o tráfego de rede a fim de identificar comportamentos suspeitos e gerar registros de dados da rede. O software de detecção encontra atividades entre usuários, computadores ou endereços IP (Protocolo de Internet) para ajudar a descobrir possíveis ameaças, riscos ou vulnerabilidades.
+
+O Suricata foi desenvolvido pela Open Information Security Foundation (OISF). A OISF se dedica a manter o uso do código aberto do projeto Suricata para garantir que ele seja gratuito e esteja disponível ao público. A Suricata é amplamente utilizada nos setores público e privado e se integra a muitas ferramentas SIEM e outras ferramentas de segurança. O Suricata também será discutido em mais detalhes posteriormente no programa.
+
+#### Use as Ferramentas SIEM para proteger as organizações
+
+##### Splunk
+
+A Splunk oferece diferentes opções de ferramentas de SIEM: Splunk® Enterprise e Splunk® Nuvem. Ambas permitem que você analise os dados de uma organização em Painéis. Isso ajuda os profissionais de segurança a gerenciar a infraestrutura interna de uma organização, coletando, pesquisando, monitorando e analisando dados de registros de várias fontes para obter visibilidade total das operações diárias de uma organização.
+
+Analise os seguintes painéis do Splunk e suas finalidades:
+
+###### Painel de postura de segurança
+
+O painel de postura de segurança foi projetado para Centros de operações de segurança (SOC). Ele exibe as últimas 24 horas dos eventos e tendências notáveis relacionados à segurança de uma organização e permite que os profissionais de segurança determinem se a infraestrutura e as políticas de segurança estão funcionando conforme projetado. Os analistas de segurança podem usar esse painel para monitorar e investigar possíveis ameaças em tempo real, como atividades de rede suspeitas originadas de um endereço IP específico. 
+
+###### Painel de resumo executivo
+
+O painel de resumo executivo analisa e monitora a saúde geral da organização ao longo do tempo. Isso ajuda as Equipes de segurança a melhorar as medidas de segurança que reduzem o Risco. Os analistas de segurança podem usar esse painel para fornecer insights de alto nível às partes interessadas, como a geração de um resumo dos incidentes de segurança e das tendências em um período específico.
+
+###### Painel de revisão de incidentes
+
+O Painel de revisão de incidentes permite que os analistas identifiquem padrões suspeitos que podem ocorrer no caso de um incidente. Ele ajuda a destacar os itens de maior Risco que precisam de revisão imediata por um analista. Esse Painel pode ser muito útil porque fornece uma linha do tempo visual dos eventos que levaram a um incidente.
+
+###### Painel de análise de risco
+
+O Painel de análise de risco ajuda os analistas a identificar o risco para cada objeto de risco (por exemplo, um usuário específico, um computador ou um endereço IP). Ele mostra mudanças em atividades ou comportamentos relacionados a riscos, como a geração de registros de um usuário fora do horário normal de trabalho ou o tráfego de rede anormalmente alto de um computador específico. Um analista de segurança pode usar esse Painel para analisar o impacto potencial das vulnerabilidades em recursos críticos, o que ajuda os analistas a priorizarem seus esforços de redução de riscos.
+
+##### Crônica
+
+O Chronicle é uma ferramenta SIEM nativa da nuvem do Google que retém, analisa e pesquisa dados de registro para identificar possíveis ameaças à segurança, riscos e vulnerabilidades. O Chronicle permite coletar e analisar dados de registros de acordo com:
+
+- Um recurso específico
+- Um nome de domínio
+- Um usuário
+- Um endereço IP
+
+O Chronicle fornece vários painéis que ajudam os analistas a monitorar os registros de uma organização, criar filtros e alertas e acompanhar nomes de domínio suspeitos.
+
+Analise os seguintes painéis do Chronicle e suas finalidades:
+
+###### Painel de insights da empresa
+
+O Painel de insights da empresa destaca os alertas recentes. Ele identifica nomes de domínios suspeitos nos registros, conhecidos como indicadores de comprometimento (IOCs). Cada resultado é rotulado com uma pontuação de confiança para indicar a probabilidade de uma ameaça. Ele também fornece um nível de gravidade que indica a importância de cada ameaça para a organização. Um analista de segurança pode usar esse painel para monitorar tentativas de login ou de acesso a dados relacionados a um recurso crítico - como um aplicativo ou sistema - de locais ou dispositivos incomuns.
+
+###### Painel de ingestão e integridade de dados
+
+O painel de ingestão e integridade de dados mostra o número de registros de eventos, as gerações de registros e as taxas de sucesso dos dados que estão sendo processados no Chronicle. Um analista de segurança pode usar esse painel para garantir que as origens de registros estejam configuradas corretamente e que os registros sejam recebidos sem erros. Isso ajuda a garantir que os problemas relacionados aos registros sejam resolvidos para que a equipe de segurança tenha acesso aos dados de registro de que precisa.
+
+###### Painel de correspondências de IOC
+
+O painel de correspondências de IOC indica as principais ameaças, riscos e vulnerabilidades da organização. Os profissionais de segurança usam esse painel para observar nomes de domínio, endereços IP e IoCs de dispositivos ao longo do tempo a fim de identificar tendências. Essas informações são então usadas para direcionar o foco da equipe de segurança para as ameaças de maior prioridade. Por exemplo, os analistas de segurança podem usar esse painel para procurar atividades adicionais associadas a um alerta, como um login de usuário suspeito em uma localização geográfica incomum. 
+
+###### Painel principal
+
+O painel principal exibe um resumo de alto nível das informações relacionadas à ingestão de dados, aos alertas e à atividade de eventos da organização ao longo do tempo. Os profissionais de segurança podem usar esse painel para acessar uma linha do tempo de eventos de segurança - como um pico de tentativas de login com falha - para identificar tendências de ameaças em fontes de registros, dispositivos, endereços IP e locais físicos.
+
+###### Painel de detecções de regras
+
+O painel de detecções de regras fornece estatísticas relacionadas a incidentes com as maiores ocorrências, gravidades e detecções ao longo do tempo. Os analistas de segurança podem usar esse painel para acessar uma lista de todos os alertas acionados por uma regra de detecção específica, como uma regra criada para alertar sempre que um usuário abrir um anexo malicioso conhecido de um e-mail. Em seguida, os analistas usam essas estatísticas para ajudar a gerenciar incidentes recorrentes e estabelecer táticas de redução de riscos para reduzir o nível de risco de uma organização.
+
+###### Painel de visão geral do login do usuário
+
+O painel de visão geral do login do usuário fornece informações sobre o comportamento de acesso do usuário em toda a organização. Os analistas de segurança podem usar esse painel para acessar uma lista de todos os eventos de login do usuário para identificar atividades incomuns do usuário, como um usuário que faz login em vários locais ao mesmo tempo. Essas informações são usadas para ajudar a reduzir as ameaças, os riscos e as vulnerabilidades das contas de usuários e dos aplicativos da organização.
