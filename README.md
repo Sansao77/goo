@@ -809,3 +809,60 @@ O painel de detecções de regras fornece estatísticas relacionadas a incidente
 ###### Painel de visão geral do login do usuário
 
 O painel de visão geral do login do usuário fornece informações sobre o comportamento de acesso do usuário em toda a organização. Os analistas de segurança podem usar esse painel para acessar uma lista de todos os eventos de login do usuário para identificar atividades incomuns do usuário, como um usuário que faz login em vários locais ao mesmo tempo. Essas informações são usadas para ajudar a reduzir as ameaças, os riscos e as vulnerabilidades das contas de usuários e dos aplicativos da organização.
+
+### Modulo 4: Usar playbooks para responder a incidentes
+
+#### Mais informações sobre playbooks
+
+##### Visão geral do manual
+
+Um **playbook** é um manual que fornece detalhes sobre qualquer ação operacional. Essencialmente, um manual fornece uma lista predefinida e atualizada de etapas a serem executadas ao responder a um incidente.
+
+![Um analista usando um manual.](./public/img/playbook-image.png)
+
+Os manuais são acompanhados de uma Estratégia. A Estratégia descreve as expectativas dos Membros da equipe aos quais é atribuída uma tarefa, e alguns manuais também listam os indivíduos responsáveis. As expectativas delineadas são acompanhadas por um plano. O plano determina como a tarefa específica descrita no manual deve ser concluída.
+
+Os manuais devem ser tratados como documentos vivos, o que significa que são atualizados com frequência pelos membros da equipe de segurança para abordar as mudanças no setor e as novas ameaças. Os manuais são geralmente gerenciados como um esforço de colaboração, uma vez que os membros da equipe de segurança têm diferentes níveis de especialização.
+
+As atualizações geralmente são feitas se:
+
+- Uma falha é identificada, como uma supervisão nas políticas e nos procedimentos delineados ou no próprio playbook.
+- Houver uma mudança nos padrões do setor, como mudanças nas leis ou na conformidade regulatória.
+- O cenário da segurança cibernética mudar devido à evolução das táticas e técnicas dos agentes de ameaças.
+
+##### Tipos de manuais
+
+Às vezes, os manuais abrangem incidentes e vulnerabilidades específicos. Isso pode incluir ransomware, vishing, BEC (Business Email Compromise) e outros ataques discutidos anteriormente. Os manuais de resposta a incidentes e vulnerabilidades são muito comuns, mas não são os únicos tipos de manuais que as organizações desenvolvem.
+
+Cada organização tem um conjunto diferente de ferramentas, metodologias, protocolos e procedimentos de playbook que adere, e diferentes indivíduos são envolvidos em cada etapa do processo de resposta, dependendo do país em que se encontram. Por exemplo, os Requisitos de notificação de incidentes de leis e regulamentações impostas pelo governo, juntamente com os padrões de conformidade, afetam o conteúdo dos manuais. Esses requisitos estão sujeitos a mudanças com base no local de origem do incidente e no Tipo de dados afetados.
+
+##### Manuais de resposta a incidentes e vulnerabilidades
+
+Os manuais de resposta a incidentes e vulnerabilidades são comumente usados por profissionais de segurança cibernética iniciantes. Eles são desenvolvidos com base nos objetivos delineados no plano de continuidade de negócios de uma organização. Um plano de continuidade de negócios é um caminho estabelecido que permite que uma empresa se recupere e continue a operar normalmente, apesar de uma interrupção como uma violação de segurança.
+
+Esses dois tipos de manuais são semelhantes, pois ambos contêm listas predefinidas e atualizadas de etapas a serem executadas ao responder a um incidente. Seguir essas etapas é necessário para garantir que você, como profissional de segurança, esteja aderindo aos padrões e protocolos legais e organizacionais. Esses manuais também ajudam a minimizar erros e a garantir que ações importantes sejam executadas em um prazo específico.
+
+Quando ocorre ou é identificado um incidente, uma ameaça ou uma vulnerabilidade, o nível de risco para a organização depende do dano potencial aos seus recursos. Uma fórmula básica para determinar o nível de risco é que o risco é igual à probabilidade de uma ameaça. Por esse motivo, um senso de urgência é essencial. Seguir as etapas descritas nos manuais também é importante se alguma tarefa forense estiver sendo realizada. O manuseio incorreto dos dados pode facilmente comprometer os dados forenses, tornando-os inutilizáveis.
+
+As etapas comuns incluídas nos manuais de incidentes e vulnerabilidades incluem:
+
+- Preparação
+- Detecção
+- Análise
+- Contenção
+- Erradicação
+- Recuperação de um incidente
+
+As etapas adicionais incluem a realização de atividades pós-incidente e a coordenação de esforços durante os estágios de investigação e resposta a incidentes e vulnerabilidades.
+
+#### Playbooks, ferramentas SIEM e ferramentas SOAR
+
+##### Playbooks e ferramentas SIEM
+
+Os manuais são usados pelas equipes de segurança cibernética no caso de um incidente. Os manuais ajudam as equipes de segurança a responder a incidentes, garantindo que uma lista consistente de ações seja seguida de maneira prescrita, independentemente de quem esteja trabalhando no caso. Os manuais podem ser muito detalhados e podem incluir fluxogramas e tabelas para esclarecer quais ações devem ser tomadas e em que ordem. Os manuais também são usados para procedimentos de recuperação no caso de um ataque de ransomware. Diferentes tipos de incidentes de segurança têm seus próprios manuais que detalham quem deve tomar qual ação e quando.
+
+Os manuais são geralmente usados juntamente com as Ferramentas SIEM. Se, por exemplo, um comportamento incomum do usuário for sinalizado por uma ferramenta SIEM, um playbook fornecerá aos analistas instruções sobre como resolver o Problema.
+
+##### Playbooks e ferramentas SOAR
+
+Os manuais também são usados com as ferramentas SOAR. As ferramentas SOAR são semelhantes às ferramentas SIEM, pois são usadas para monitoramento de ameaças. O SOAR é um software usado para automatizar tarefas repetitivas geradas por ferramentas como o SIEM ou a detecção e resposta gerenciadas (MDR). Por exemplo, se um usuário tentar fazer o registro no computador muitas vezes com a senha errada, um SOAR bloquearia automaticamente a contabilização para impedir uma possível intrusão. Em seguida, os analistas consultariam um manual para tomar as medidas necessárias para resolver o problema.
