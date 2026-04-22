@@ -866,3 +866,254 @@ Os manuais são geralmente usados juntamente com as Ferramentas SIEM. Se, por ex
 ##### Playbooks e ferramentas SOAR
 
 Os manuais também são usados com as ferramentas SOAR. As ferramentas SOAR são semelhantes às ferramentas SIEM, pois são usadas para monitoramento de ameaças. O SOAR é um software usado para automatizar tarefas repetitivas geradas por ferramentas como o SIEM ou a detecção e resposta gerenciadas (MDR). Por exemplo, se um usuário tentar fazer o registro no computador muitas vezes com a senha errada, um SOAR bloquearia automaticamente a contabilização para impedir uma possível intrusão. Em seguida, os analistas consultariam um manual para tomar as medidas necessárias para resolver o problema.
+
+## Conectar e Proteger: Redes e segurança de rede
+
+### Modulo 1: Arquitetura de Computadores
+
+#### Componentes, dispositivos e diagramas de rede
+
+##### Dispositivos de rede
+
+Os dispositivos de rede mantêm informações e serviços para os usuários de uma rede. Esses dispositivos se conectam por meio de conexões com e sem fio. Depois de estabelecer uma conexão com a rede, os dispositivos enviam pacotes de dados. Os pacotes de dados fornecem informações sobre a origem e o destino dos dados. É assim que as informações são enviadas e recebidas por meio de diferentes dispositivos em uma rede.
+
+A rede é a infraestrutura geral que permite que os dispositivos se comuniquem entre si. Os dispositivos de rede são veículos especializados, como roteadores e switches, que gerenciam o que está sendo enviado e recebido pela rede. Além disso, dispositivos como computadores e telefones se conectam à rede por meio de dispositivos de rede. 
+
+![demonstracao de rede](./public/img/demonstracao-rede.png)
+
+**Observação**: neste diagrama, um **roteador** se conecta à Internet por meio de um modem, que é fornecido pelo seu provedor de acesso à Internet (ISP). O firewall é um dispositivo de segurança que monitora o tráfego de entrada e saída em sua rede. Em seguida, o roteador direciona o tráfego para os dispositivos em sua rede doméstica, que podem incluir computadores, laptops, smartphones, tablets, impressoras e outros dispositivos. Você pode imaginar aqui que o servidor é um servidor de arquivos. Todos os dispositivos dessa rede podem acessar os arquivos desse servidor. Este diagrama também inclui uma troca de rede, que é um dispositivo opcional que pode ser usado para conectar mais dispositivos à sua rede, fornecendo portas adicionais e conexões Ethernet. Além disso, há dois roteadores conectados ao switch aqui para fins de balanceamento de carga, o que melhorará o desempenho da rede.
+
+##### Dispositivos e computadores desktop
+
+A maioria dos usuários da Internet está familiarizada com dispositivos do dia a dia, como computadores pessoais, laptops, telefones celulares e tablets. Cada dispositivo e computador de mesa tem um endereço MAC e um endereço IP exclusivos, que o identificam na rede. Eles também têm uma interface de rede que envia e recebe pacotes de dados. Esses dispositivos podem se conectar à rede por meio de um fio rígido ou de uma conexão sem fio.
+
+###### Firewalls
+
+Um **firewall** é um dispositivo de Segurança de rede que monitora o tráfego de ou para a sua rede. É como sua primeira linha de defesa. Os firewalls também podem restringir o tráfego específico de entrada e saída da rede. A organização configura as regras de segurança do firewall. Os firewalls geralmente ficam entre a rede interna protegida e controlada e os recursos de rede não confiáveis fora da organização, como a Internet. Lembre-se, porém, de que os firewalls são apenas uma linha de defesa no cenário da segurança cibernética.
+
+###### Servidores
+
+Os **servidores** fornecem informações e serviços para dispositivos como computadores, dispositivos domésticos inteligentes e smartphones na rede. Os dispositivos que se conectam a um servidor são chamados de clientes. O gráfico a seguir descreve esse modelo, que é chamado de modelo cliente-servidor. Nesse modelo, os clientes enviam solicitações ao servidor para obter informações e serviços. O servidor executa as solicitações para os clientes. Exemplos comuns incluem servidores DNS que realizam pesquisas de nomes de domínio para sites da Internet, servidores de arquivos que armazenam e recuperam arquivos de um banco de dados e servidores de correio corporativo que organizam o correio de uma empresa.
+
+![diagrama servidores](./public/img/diagrama-servidores.png)
+
+###### Hubs e switches
+
+Os hubs e os switches direcionam o tráfego em uma rede local. Um **hub** é um dispositivo que fornece um ponto comum de conexão para todos os dispositivos diretamente conectados a ele. Além disso, os hubs repetem todas as informações para todas as portas. Do ponto de vista da segurança, isso torna os hubs vulneráveis a espionagem. Por esse motivo, os hubs não são usados com tanta frequência nas redes modernas; em vez disso, a maioria das organizações usa switches. Os hubs são mais comumente usados para uma configuração de rede LIMIT, como um escritório doméstico.
+
+Os switches são a escolha preferida para a maioria das redes. Um **switch** encaminha pacotes entre dispositivos diretamente conectados a ele. Ele analisa o endereço de destino de cada pacote de dados e o envia para o dispositivo pretendido. Os switches mantêm uma tabela de endereços MAC que faz a correspondência entre os endereços MAC dos dispositivos na rede e os números das portas do switch e encaminha os pacotes de dados recebidos de acordo com o endereço MAC de destino. Os switches fazem parte da camada de enlace de dados no modelo TCP/IP. De modo geral, os switches melhoram o desempenho e a segurança.
+
+###### Roteadores
+
+Os **roteadores** conectam redes e direcionam o tráfego, com base no endereço IP da rede de destino. Os roteadores permitem que dispositivos em redes diferentes se comuniquem entre si. No modelo TCP/IP, os roteadores fazem parte da camada de rede. O endereço IP da rede de destino está contido no cabeçalho IP. O roteador lê as informações do cabeçalho IPS e encaminha o pacote para o próximo roteador no caminho para o destino. Isso continua até que o pacote chegue à rede de destino. Os roteadores também podem incluir um recurso de firewall que permite ou bloqueia o tráfego de entrada com base nas informações da transmissão. Isso impede que o tráfego mal-intencionado entre na rede privada e danifique a rede local.
+
+###### Modems e pontos de acesso sem fio
+
+Os **modems** geralmente conectam sua casa ou escritório a um provedor de acesso à Internet (ISP). Os ISPs fornecem conectividade com a Internet por meio de linhas telefônicas, cabos coaxiais ou cabos de fibra óptica. Os modems recebem transmissões ou sinais digitais da Internet e os convertem em um formato digital compatível com a conexão física fornecida pelo ISP. Normalmente, os modems se conectam a um roteador que recebe as transmissões decodificadas e as envia para a rede local.
+
+**Observação**: as redes corporativas usadas por grandes organizações para conectar seus usuários e dispositivos geralmente usam outras tecnologias de banda larga para lidar com o tráfego de alto volume, em vez de usar um modem.
+
+![diagrama modems](./public/img/diagrama-modems.png)
+
+###### Ponto de acesso sem fio
+
+Um **ponto de acesso sem fio** envia e recebe sinais digitais por ondas de rádio, criando uma rede sem fio. Os dispositivos com adaptadores sem fio se conectam ao ponto de acesso usando Wi-Fi. Wi-Fi refere-se a um conjunto de padrões usados por dispositivos de rede para se comunicar sem fio. Os pontos de acesso sem fio e os dispositivos conectados a eles usam protocolos Wi-Fi para enviar dados por ondas de rádio, onde são enviados a roteadores e interruptores e direcionados ao longo do caminho até o destino final.
+
+##### Uso de diagramas de rede como analista de segurança
+
+Os **Diagramas de rede** permitem que os administradores de rede e a equipe de Segurança de rede imaginem a arquitetura e o design da rede privada de sua organização.
+
+Os Diagramas de rede são mapas que mostram os dispositivos na rede e como eles se conectam. Os Diagramas de rede usam pequenos gráficos representativos para retratar cada dispositivo de rede e linhas pontilhadas para mostrar como cada dispositivo se conecta ao outro. Ao estudar os Diagramas de rede, os analistas de segurança desenvolvem e refinam suas estratégias para proteger as arquiteturas de rede.
+
+![diagrama redes](./public/img/diagrama-redes.png)
+
+#### Computação em nuvem e redes definidas por software
+
+##### Processos de computação em nuvem
+
+As redes tradicionais são chamadas de redes locais, o que significa que todos os dispositivos usados para as operações de rede são mantidos em um local físico de propriedade da empresa, como em um prédio de escritórios, por exemplo. **A computação em nuvem**, no entanto, refere-se à prática de usar servidores, aplicativos e serviços de rede remotos hospedados na Internet em vez de em um local físico de propriedade da empresa.
+
+Um provedor de serviços em nuvem (CSP) é uma empresa que oferece serviços de computação em nuvem. Essas empresas possuem grandes data centers em locais ao redor do mundo que abrigam milhões de servidores. Os data centers fornecem serviços de tecnologia, como armazenamento e computação, em uma escala tão grande que podem vender seus serviços a outras empresas mediante o pagamento de uma taxa. As empresas podem pagar pelo armazenamento e pelos serviços de que precisam e consumi-los por meio da API (Interface de Programação de Aplicação) ou do console da Web do CSP.
+
+Os CSPs oferecem três categorias principais de serviços:
+
+- **Software como serviço (SaaS)** refere-se a conjuntos de software operados pelo CSP que uma empresa pode usar remotamente sem hospedar o software.
+- **Infraestrutura como serviço (IaaS)** refere-se ao uso de componentes de computador virtuais oferecidos pelo CSP. Eles incluem contenções virtuais e armazenamento que são configurados remotamente por meio da API ou do console da Web do CSP. Os serviços de computação e armazenamento em nuvem podem ser usados para operar aplicativos existentes e outras cargas de trabalho de tecnologia sem modificações significativas. Os aplicativos existentes podem ser modificados para aproveitar os recursos de disponibilidade, desempenho e segurança que são exclusivos dos serviços do provedor de nuvem.
+- **Plataforma como serviço (PaaS)** refere-se a ferramentas que os desenvolvedores de aplicativos podem usar para projetar aplicativos personalizados para sua empresa. Os aplicativos personalizados são projetados e acessados na Nuvem e usados para as necessidades comerciais específicas de uma empresa.
+
+![Diferenças entre IaaS, PaaS e SaaS e como cada um se conecta a um data center físico](./public/img/CSP.png)
+
+##### Ambientes de nuvem híbrida
+
+Quando as organizações usam os serviços de um CSP além de seus computadores, redes de computadores e armazenamento no local, isso é chamado de ambiente de nuvem híbrida. Quando as organizações usam mais de um CSP, isso é chamado de ambiente de várias nuvens. A grande maioria das organizações usa ambientes de nuvem híbrida para reduzir custos e manter o controle sobre os recursos da rede.
+
+##### Redes de computadores definidas por software
+
+Os CSPs oferecem ferramentas de rede de computadores semelhantes aos dispositivos físicos sobre os quais você aprendeu nesta seção do curso. A seguir, você analisará a rede de computadores definida por software na Nuvem. As redes definidas por software (SDNs) são compostas de dispositivos e serviços de rede virtuais. Assim como os CSPs fornecem computadores virtuais, muitas SDNs também fornecem switches virtuais, roteadores, firewalls e muito mais. A maioria dos dispositivos de hardware de rede modernos também oferece suporte à virtualização de rede e à rede definida por software. Isso significa que os switches e roteadores físicos usam software para realizar o roteamento de pacotes. No caso da rede de computadores em nuvem, as ferramentas SDN são hospedadas em servidores localizados no data center do CSP.
+
+##### Benefícios da computação em nuvem e das redes definidas por software 
+
+Três dos principais motivos pelos quais a computação em nuvem é tão atraente para as empresas são a confiabilidade, a redução de custos e o aumento da escalonabilidade. 
+
+###### Confiabilidade
+
+A Confiabilidade na computação em nuvem se baseia na disponibilidade dos serviços e recursos da nuvem, na segurança das conexões e na frequência com que os serviços são efetivamente executados. A computação em nuvem permite que funcionários e clientes acessem os recursos de que precisam de forma consistente e com o mínimo de interrupção. 
+
+###### Custos
+
+Tradicionalmente, as empresas precisavam fornecer sua própria infraestrutura de rede, pelo menos para as conexões de Internet. Isso significava que poderia haver custos iniciais potencialmente significativos para as empresas. No entanto, como os CSPs têm data centers tão grandes, eles podem oferecer dispositivos e serviços de virtualização por uma fração do custo necessário para as empresas instalarem, corrigirem, atualizarem e gerenciarem os componentes e o software por conta própria.
+
+###### Escalonabilidade
+
+Outro desafio que as empresas enfrentam com o computador tradicional é a escalonabilidade. Quando as organizações experimentam um aumento em suas necessidades comerciais, elas podem ser forçadas a comprar mais equipamentos e software para acompanhar o ritmo. Mas e se os negócios diminuírem logo em seguida? Talvez não haja mais negócios que justifiquem o custo incorrido com os componentes atualizados. Os CSPs reduzem esse risco facilitando o consumo de serviços em um modelo de utilidade elástica, conforme necessário. Isso significa que as empresas pagam apenas pelo que precisam, quando precisam.
+
+As mudanças podem ser feitas rapidamente por meio dos CSPs, APIs ou console da Web - muito mais rapidamente do que se os técnicos de rede tivessem que comprar seu próprio hardware e configurá-lo. Por exemplo, se uma empresa precisar se proteger contra uma ameaça à sua rede, os Firewalls de aplicativos da Web (WAF), os Sistemas de detecção de intrusão/proteção (IDS/IPS) ou os Firewalls L3/L4 podem ser configurados rapidamente sempre que necessário, levando a um melhor desempenho e segurança de rede.
+
+#### Saiba mais sobre o modelo TCP/IP
+
+##### O modelo TCP/IP
+
+O **modelo TCP/IP** é uma estrutura usada para visualizar como os dados são organizados e transmitidos em uma rede. Esse modelo ajuda os engenheiros de rede e os analistas de segurança de rede a conceituar os processos na rede e a comunicar onde ocorrem interrupções ou ameaças à segurança.
+
+O modelo TCP/IP tem quatro camadas: a camada de acesso à rede, a camada de Internet, a camada de transporte e a camada do aplicativo. Ao solucionar problemas na rede, os profissionais de segurança podem analisar quais camadas foram afetadas por um ataque com base nos processos envolvidos em um incidente. 
+![As quatro camadas do modelo TCP/IP são denominadas camada do aplicativo, camada de transporte, camada da Internet e camada de acesso à rede](./public/img/TCP_IP_camadas.png)
+
+##### Camada de acesso à rede
+
+A **camada de acesso à rede**, às vezes chamada de camada de enlace de dados, lida com a criação de pacotes de dados e sua transmissão em uma rede. Essa camada corresponde ao hardware físico envolvido na transmissão da rede. Hubs, modems, cabos e fiação são todos considerados parte dessa camada. O protocolo de resolução de endereço (ARP) faz parte da camada de acesso à rede. Como os endereços MAC são usados para identificar hosts na mesma rede física, o ARP é necessário para mapear os endereços IP aos endereços MAC para a comunicação na rede local.
+
+##### Camada da Internet
+
+A **camada de Internet**, às vezes chamada de camada de rede, é responsável por garantir a entrega ao host de destino, que possivelmente reside em uma rede diferente. Ela garante que os endereços IP sejam anexados aos pacotes de dados para indicar a localização do remetente e do receptor. A camada de Internet também determina qual protocolo é responsável pela entrega dos pacotes de dados e garante a entrega ao host de destino. Aqui estão alguns dos protocolos comuns que operam na camada de Internet:
+
+- **Protocolo de Internet (IP)**. O IP envia os pacotes de dados para o destino correto e conta com o protocolo TCP/IP (Transmission Control Protocol/User Datagrama IP) para entregá-los ao serviço correspondente. Os pacotes IPS permitem a comunicação entre duas redes de computadores. Eles são roteados da rede de computadores que os envia para a rede receptora. O TCP, em particular, retransmite todos os dados perdidos ou corrompidos.
+- **Protocolo de Mensagens de Controle da Internet (ICMP)**. O ICMP compartilha informações sobre erros e atualizações de status de pacotes de dados. Isso é útil para detectar e solucionar problemas de erros de rede. O ICMP relata informações sobre pacotes que foram descartados ou que desapareceram em trânsito, problemas com a conectividade da rede e pacotes redirecionados para outros roteadores.
+
+##### Camada de transporte
+
+A camada de transporte é responsável pela entrega de dados entre dois sistemas ou redes e inclui protocolos para controlar o fluxo de tráfego em uma rede. O TCP e o UDP são os dois protocolos de transporte que ocorrem nessa camada.
+Protocolo TCP
+
+O **Protocolo de Controle de Transmissão (TCP)** é um protocolo de comunicação da Internet que permite que dois dispositivos formem uma conexão e transmitam dados. Ele garante que os dados sejam transmitidos de forma confiável para o serviço de destino. O TCP contém o número da porta do serviço de destino pretendido, que contém o cabeçalho TCP de um pacote TCP/IP.
+Protocolo de datagrama do usuário 
+
+O **User Datagram Protocol (UDP)** é um protocolo sem conexão que não estabelece uma conexão entre dispositivos antes das transmissões. Ele é usado por aplicativos que não se preocupam com a Confiabilidade da transmissão. Os dados enviados por UDP não são rastreados tão extensivamente quanto os dados enviados por TCP. Como o UDP não estabelece conexões de rede, ele é usado principalmente para aplicativos sensíveis ao desempenho que operam em tempo real, como streaming de vídeo.
+
+##### Camada do aplicativo
+
+A camada de aplicativo no modelo TCP/IP é semelhante às camadas de aplicativo, apresentação e sessão do modelo OSI. A camada do aplicativo é responsável por fazer solicitações de rede ou responder a solicitações. Essa camada define quais serviços e aplicativos da Internet qualquer usuário pode acessar. Os protocolos na camada do aplicativo determinam como os pacotes de dados interagirão com os dispositivos receptores. Alguns protocolos comuns usados nessa camada são:
+
+- Hypertext Transfer Protocol (HTTP)
+- Protocolo de transferência de correio simples (SMTP)
+- Secure Shell (SSH)
+- Protocolo de Transferência de Arquivos (FTP)
+- Sistema de Nomes de Domínio (DNS)
+
+Os protocolos da camada de aplicativo dependem das camadas subjacentes para transferir os dados pela rede.
+
+##### Modelo TCP/IP versus modelo OSI
+
+![O modelo TCP/IP ao lado do modelo OSI](./public/img/TCP_IP_OSI.png)
+
+O modelo **OSI** organiza visualmente os protocolos de rede em diferentes camadas. Os profissionais de rede geralmente usam esse modelo para se comunicarem uns com os outros sobre possíveis fontes de problemas ou ameaças à segurança de rede quando elas ocorrem. 
+
+O modelo TCP/IP combina várias camadas do modelo OSI. Há muitas semelhanças entre os dois modelos. Ambos os modelos definem padrões para a rede de computadores e dividem o processamento da comunicação de rede em diferentes camadas. O modelo TCP/IP é uma versão simplificada do modelo OSI.
+
+#### O modelo OSI
+
+##### O modelo TCP/IP vs. o modelo OSI
+
+O **modelo TCP/IP** é uma estrutura usada para visualizar como os dados são organizados e transmitidos em uma rede. Esse modelo ajuda os engenheiros de rede e os analistas de segurança a conceituar os processos na rede e a comunicar onde ocorrem interrupções ou ameaças à segurança.
+
+O modelo TCP/IP tem quatro camadas: a camada de acesso à rede, a camada de Internet, a camada de transporte e a camada do aplicativo. Ao analisar eventos de rede, os profissionais de segurança podem determinar em que camada ou camadas ocorreu um ataque com base nos processos envolvidos no incidente. 
+
+O **modelo OSI** é um conceito padronizado que descreve as sete camadas que os computadores usam para se comunicar e enviar dados pela rede. Os profissionais de segurança de rede e de segurança geralmente usam esse modelo para se comunicarem entre si sobre possíveis fontes de problemas ou ameaças à segurança quando elas ocorrem.
+
+![As sete camadas do modelo OSI rotuladas como aplicativo, apresentação, sessão, transporte, rede, enlace de dados e física](./public/img/OSI_camadas.png)
+
+Algumas organizações dependem muito do modelo TCP/IP, enquanto outras preferem usar o modelo OSI. AS como analista de segurança, é importante estar familiarizado com ambos os modelos. Os modelos TCP/IP e OSI são úteis para entender como as redes de computadores funcionam.
+
+##### Camada 7: camada do aplicativo
+
+A camada do aplicativo inclui os processos que envolvem diretamente o usuário comum. Essa camada inclui todos os protocolos de rede que os aplicativos de software usam para conectar um usuário à Internet. Essa característica é a que identifica a camada do aplicativo: a conexão do usuário à Internet por meio de aplicativos e solicitações.
+
+Um exemplo de um tipo de comunicação que ocorre na camada do aplicativo é o uso de um navegador da Web. O navegador da Internet usa HTTP ou HTTPS para enviar e receber informações do servidor do site. O aplicativo de e-mail usa o protocolo de transferência de correio simples (SMTP) para enviar e receber informações de e-mail. Além disso, os navegadores da Web usam o protocolo DNS (sistema de nomes de domínio) para traduzir os nomes de domínio do site em endereços IP que identificam o servidor da Web que hospeda as informações do site. 
+
+##### Camada 6: camada de apresentação
+
+As funções da camada de apresentação envolvem a tradução de dados e a criptografia para a rede. Essa camada adiciona e substitui dados por formatos que podem ser compreendidos pelos aplicativos (camada 7) nos sistemas de envio e recebimento. Os formatos na extremidade do usuário podem ser diferentes daqueles do sistema receptor. Os processamentos na camada de apresentação exigem o uso de um formato padronizado.
+
+Algumas funções de formatação que ocorrem na camada 6 incluem criptografia, compactação e confirmação de que o conjunto de códigos de caracteres pode ser interpretado no sistema receptor. Um exemplo de criptografia que ocorre nessa camada é o SSL, que criptografa os dados entre os servidores da Web e os navegadores como parte de sites com HTTPS.
+
+##### Camada 5: camada de sessão
+
+Uma sessão descreve quando uma conexão é estabelecida entre dois dispositivos. Uma sessão aberta permite que os dispositivos se comuniquem entre si. Os protocolos da camada de sessão mantêm a sessão aberta enquanto os dados estão sendo transferidos e encerram a sessão quando a transmissão é concluída.
+
+A camada de sessão também é responsável por atividades como autenticação, reconexão e definição de pontos de verificação durante uma transferência de dados. Se uma sessão for interrompida, os pontos de verificação garantem que a transmissão seja retomada no último ponto de verificação da sessão quando a conexão for retomada. As sessões incluem uma solicitação e uma resposta entre aplicativos. As funções na camada de sessão respondem a solicitações de serviço de processos na camada de apresentação (camada 6) e enviam solicitações de serviços para a camada de transporte (camada 4).
+
+##### Camada 4: camada de transporte
+
+A camada de transporte é responsável pela entrega de dados entre dispositivos. Essa camada também lida com a velocidade da transferência de dados, com o Fluxo da transferência e com a divisão dos dados em segmentos menores para facilitar o transporte. Segmentação é o processo de dividir uma grande transmissão de dados em partes menores que podem ser processadas pelo sistema receptor. Esses segmentos precisam ser remontados em seu destino para que possam ser processados na camada de sessão (camada 5). A velocidade e a taxa da transmissão também precisam corresponder à velocidade da conexão do sistema de destino. O TCP e o UDP são protocolos da camada de transporte.
+
+##### Camada 3: camada de rede
+
+A camada de rede supervisiona o recebimento dos frames da camada de enlace de dados (camada 2) e os entrega ao destino pretendido. O destino pretendido pode ser encontrado com base no endereço que reside no frame dos pacotes de dados. Os pacotes de dados permitem a comunicação entre duas redes de computadores. Esses pacotes incluem endereços IP que informam aos roteadores para onde devem ser enviados. Eles são roteados da rede de envio para a rede de recebimento.
+
+##### Camada 2: camada de enlace de dados
+
+A camada de enlace de dados organiza o envio e o recebimento de pacotes de dados em uma única rede. A camada de enlace de dados abriga as trocas de rede locais e as placas de interface de rede (NIC) nos dispositivos locais.
+
+Protocolos como o protocolo de controle de rede (NCP), o controle de link de dados de alto nível (HDLC) e o protocolo de controle de link de dados síncrono (SDLC) são usados na camada de enlace de dados.
+
+##### Camada 1: camada física
+
+Como o nome sugere, a camada física corresponde ao hardware físico envolvido na transmissão da rede. Hubs, modems a cabo e os cabos e a fiação que os conectam são considerados parte da camada física. Para trafegar por um cabo Ethernet ou coaxial, um pacote de dados precisa ser traduzido em um fluxo de 0s e 1s. O fluxo de 0s e 1s é enviado através da fiação e dos cabos físicos, recebido e, em seguida, passado para níveis mais altos do modelo OSI.
+
+#### Componentes da comunicação na camada de rede
+
+##### Operações na camada de rede
+
+As funções da camada de rede organizam o endereçamento e o fornecimento de pacotes de dados pela rede, do dispositivo host ao dispositivo de destino. Isso inclui o direcionamento dos pacotes de um roteador para outro roteador na Internet, até chegar ao endereço IP (Internet Protocol) da rede de destino. O endereço IP de destino está contido no Cabeçalho de cada pacote de dados. Esse endereço será armazenado para fins de roteamento futuro em tabelas de roteamento ao longo do caminho do pacote até seu destino.
+
+Todos os pacotes de dados incluem um endereço IP. Um pacote de dados também é chamado de pacote IP para conexões TCP ou datagrama IP para conexões UDP. Um roteador usa o endereço IP para encaminhar os pacotes de uma rede para outra com base nas informações contidas no Cabeçalho IP de um pacote de dados. As informações do Cabeçalho comunicam mais do que apenas o endereço do destino. Elas também incluem informações como o endereço IP de origem, o tamanho do pacote e qual protocolo será usado para a parte de dados do pacote.
+
+###### Formato de um pacote IPv4
+
+![Um pacote de IPS dividido em duas partes: uma seção à esquerda marcada como "cabeçalho" e uma seção à direita marcada como "dados"](./public/img/pacote_ipv4.png)
+
+A seguir, você pode analisar o formato de um pacote IP versão 4 (IPv4) e ver um gráfico detalhado do Cabeçalho do pacote. Um pacote IPv4 é composto de duas seções, o Cabeçalho e os dados:
+
+- O formato do Cabeçalho IPv4 é determinado pelo protocolo IPv4 e inclui as Informações de roteamento IP que os dispositivos usam para direcionar o pacote. O tamanho do Cabeçalho IPv4 varia de 20 a 60 bytes. Os primeiros 20 bytes são um conjunto fixo de informações que contêm dados como o endereço IP de origem e destino, o comprimento do cabeçalho e o comprimento total do pacote. O último conjunto de bytes pode variar de 0 a 40 e consiste no campo "Options".
+- O Comprimento da seção de dados de um pacote IPv4 pode variar muito em tamanho. Entretanto, o tamanho máximo possível de um pacote IPv4 é de 65.535 bytes. Contém a mensagem que está sendo transferida pela Internet, como informações de um site ou texto de e-mail. 
+
+    ![Diagrama de um cabeçalho de pacote IPv4, 13 campos e tamanho de bit](./public/img/cabecalho_pacote_ipv4.png)
+
+Há 13 campos no Cabeçalho de um pacote IPv4:
+
+- **Versão (VER)**: Esse componente de 4 bits informa aos dispositivos receptores qual protocolo o pacote está usando. O pacote usado na ilustração acima é um pacote IPv4.
+- **Comprimento do Cabeçalho IP (HLEN ou IHL)**: HLEN é o comprimento do cabeçalho do pacote. Esse valor indica onde termina o Cabeçalho do pacote e começa o segmento de dados.
+- **Tipo de serviço (ToS)**: Os roteadores priorizam a entrega de pacotes para manter a qualidade do serviço na rede. O Campo ToS fornece essas informações ao roteador.
+- **Comprimento total (Total Comprimento)**: Esse campo comunica o comprimento total de todo o pacote IP, incluindo o "Header" e os dados. O tamanho máximo de um pacote IPv4 é de 65.535 bytes.
+- **Identificação**: Os pacotes IPv4 podem ter até 65.535 bytes, mas a maioria das redes de computadores tem um LIMIT menor. Nesses casos, os pacotes são divididos, ou fragmentados, em pacotes IPS menores. O campo "Identification" fornece um identificador exclusivo para todos os fragmentos do pacote IP original, de modo que eles possam ser remontados quando chegarem ao destino.
+- **Sinalizadores**: Esse campo fornece ao dispositivo de roteamento mais informações sobre se o pacote original foi fragmentado e se há mais fragmentos em trânsito.
+- **Fragmentation Offset (deslocamento de fragmentação)**: O campo "Fragmentation offset" informa aos dispositivos de roteamento a que parte do pacote original o fragmento pertence.
+- **Time to Live (TTL)**: o TTL impede que os pacotes de dados sejam encaminhados indefinidamente pelos roteadores. Ele contém um contador que é definido pela fonte. O contador é diminuído em um à medida que passa por cada roteador em seu caminho. Quando o contador TTL chegar a zero, o roteador que estiver segurando o pacote o descartará e retornará uma mensagem de erro ICMP Time Exceeded ao remetente.
+- **Protocolo**: O campo "Protocolo" informa ao dispositivo receptor qual protocolo será usado para a parte de dados do pacote.
+- **Checksum do Cabeçalho**: O campo "header checksum" contém uma soma de verificação que pode ser usada para detectar corrupção do cabeçalho IPS em trânsito. Os pacotes corrompidos são descartados.
+- **Endereço IP de origem**: O endereço IP de origem é o endereço IPv4 do dispositivo de envio.
+- **Endereço IP de destino**: O endereço IP de destino é o endereço IPv4 do dispositivo de destino.
+- **Options (Opções)**: O campo "Options" permite que opções de segurança sejam aplicadas ao Pacote se o valor HLEN for maior que cinco. O campo "Options" comunica essas opções aos dispositivos de roteamento.
+
+##### Diferença entre IPv4 e IPv6
+
+Em uma parte anterior deste curso, você aprendeu sobre a história do endereço IP. À medida que a Internet crescia, ficou claro que todos os endereços IPv4 acabariam se esgotando; isso é chamado de exaustão de endereços IPv4. Na época, ninguém havia previsto quantos dispositivos de computador precisariam de um endereço IP. O IPv6 foi desenvolvido para mitigar o esgotamento de endereços IPv4 e outras preocupações relacionadas.
+
+Algumas das principais diferenças entre o IPv4 e o IPv6 incluem o comprimento e o formato dos endereços. Os endereços IPv4 são compostos de quatro números decimais separados por pontos, cada número variando de 0 a 255. Juntos, os números abrangem 4 bytes e permitem até 4,3 bilhões de endereços possíveis. Um exemplo de um endereço IPv4 seria: 198.51.100.0. Os endereços IPv6 são formados por oito números hexadecimais separados por dois pontos, sendo que cada número consiste em até quatro dígitos hexadecimais. Juntos, todos os números abrangem 16 bytes e permitem até 340 undecilhões de endereços (340 seguido de 36 zeros). Um exemplo de um endereço IPv6 seria: 2002:0db8:0000:0000:0000:ff21:0023:1234.
+
+**Observação**: para representar um ou mais conjuntos consecutivos de todos os zeros, você pode substituir os zeros por dois pontos duplos "::", de modo que o endereço IPv6 acima seria "2002:0db8::ff21:0023:1234"
+
+Há também algumas diferenças no layout do Cabeçalho de um pacote IPv6. O formato do Cabeçalho do IPv6 é muito mais simples do que o do IPv4. Por exemplo, o Cabeçalho IPv4 inclui os campos "IHL", "Identification" e "Flags", enquanto o IPv6 não inclui. O Cabeçalho IPv6 introduz apenas o campo "Flow Rótulo", no qual o Rótulo de Fluxo identifica um Pacote que requer tratamento especial por outros roteadores IPv6.
+
+![Diagramas lado a lado de um cabeçalho de pacote IPv4 e de um pacote IPv6 simplificado](./public/img/comparacao_cabecalho_ipv4_ipv6.png)
+
+Há algumas diferenças importantes de segurança entre o IPv4 e o IPv6. O IPv6 oferece roteamento mais eficiente e elimina as colisões de endereços privados que podem ocorrer no IPv4 quando dois dispositivos na mesma rede estão tentando usar o mesmo endereço.
