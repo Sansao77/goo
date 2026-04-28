@@ -1117,3 +1117,382 @@ Há também algumas diferenças no layout do Cabeçalho de um pacote IPv6. O for
 ![Diagramas lado a lado de um cabeçalho de pacote IPv4 e de um pacote IPv6 simplificado](./public/img/comparacao_cabecalho_ipv4_ipv6.png)
 
 Há algumas diferenças importantes de segurança entre o IPv4 e o IPv6. O IPv6 oferece roteamento mais eficiente e elimina as colisões de endereços privados que podem ocorrer no IPv4 quando dois dispositivos na mesma rede estão tentando usar o mesmo endereço.
+
+### Modulo 2: Operações de Redes
+
+#### Protocolos de rede comuns
+
+##### Visão geral dos protocolos de rede
+
+Um protocolo de rede é um conjunto de regras usadas por dois ou mais dispositivos em uma rede para descrever a ordem de entrega e a estrutura de dados. Os protocolos de rede funcionam como instruções que acompanham as informações do pacote de dados. Essas instruções dizem ao dispositivo receptor o que fazer com os dados. Os protocolos são como uma linguagem comum que permite que dispositivos de todo o mundo se comuniquem e se entendam.
+
+Embora os protocolos de rede desempenhem uma função essencial na comunicação de rede, os analistas de segurança ainda devem entender suas implicações de segurança associadas. Alguns protocolos têm vulnerabilidades que são exploradas por agentes mal-intencionados. Por exemplo, um agente nefasto poderia usar o protocolo do Sistema de Nomes de Domínio (DNS), que resolve endereços da Web para endereços IP, para desviar o Tráfego de um site legítimo para um site malicioso que contenha malware. Você aprenderá mais sobre esse tópico nos próximos Materiais do curso.
+
+##### Três categorias de protocolos de rede
+
+Os protocolos de rede podem ser divididos em três categorias principais: protocolos de comunicação, protocolos de gerenciamento e protocolos de segurança. Há dezenas de protocolos de rede diferentes, mas você não precisa memorizar todos eles para uma função de analista de segurança de nível básico. Entretanto, é importante que você conheça os que estão listados nesta leitura.
+
+###### Protocolos de comunicação
+
+Os protocolos de comunicação regem a troca de informações na transmissão da rede. Eles determinam como os dados são transmitidos entre os dispositivos e o tempo da comunicação. Eles também incluem métodos para recuperar dados perdidos em trânsito. Aqui estão alguns deles.
+
+- **O Protocolo de controle de transmissão/protocolo de Internet(TCP)** é um protocolo de comunicação da Internet que permite que dois dispositivos formem uma conexão e transmitam dados. O TCP usa um processamento de handshake de três vias. Primeiro, o dispositivo envia uma solicitação de sincronização (SYN) a um servidor. Em seguida, o servidor responde com um pacote SYN/ACK para confirmar o recebimento da solicitação do dispositivo. Quando o servidor recebe o pacote ACK final do dispositivo, é estabelecida uma conexão TCP. No modelo TCP/IP, o TCP ocorre na camada de transporte.
+
+- **O UDP (User Datagram Protocol)** é um protocolo sem conexão que não estabelece uma conexão entre dispositivos antes de uma transmissão. Isso o torna menos confiável do que o TCP. Mas isso também significa que ele funciona bem para transmissões que precisam chegar rapidamente ao seu destino. Por exemplo, um dos usos do UDP é o envio de solicitações de DNS para servidores DNS locais. No modelo TCP/IP, o UDP ocorre na camada de transporte.
+
+- **O Protocolo de transferência de hipertexto (HTTP)** é um protocolo da camada do aplicativo que fornece um método de comunicação entre clientes e servidores de sites. O HTTP usa a porta 80. O HTTP é considerado inseguro, por isso está sendo substituído na maioria dos sites por uma versão segura, chamada HTTPS, que usa criptografia de SSL/TLS para comunicação. Entretanto, ainda há muitos sites que usam o protocolo HTTP inseguro. No modelo TCP/IP, o HTTP ocorre na camada do aplicativo.
+
+- **O Sistema de Nomes de Domínio (DNS)** é um protocolo que traduz os nomes de domínio da Internet em endereços IP. Quando um computador cliente deseja acessar o domínio de um site usando seu navegador da Internet, uma consulta é enviada a um servidor DNS dedicado. Em seguida, o servidor DNS procura o endereço IP que corresponde ao domínio do site. O DNS normalmente usa UDP na porta 53. No entanto, se a resposta do DNS a uma solicitação for grande, ele passará a usar o protocolo TCP. No modelo TCP/IP, o DNS ocorre na camada do aplicativo.
+
+###### Protocolos de gerenciamento
+
+A próxima categoria de protocolos de rede são os protocolos de gerenciamento. Os protocolos de gerenciamento são usados para monitorar e gerenciar a atividade em uma rede. Eles incluem protocolos para relatórios de erros e otimização do desempenho na rede.
+
+- **O Protocolo de Gerenciamento de Rede Simples (SNMP)** é um protocolo de rede usado para monitorar e gerenciar dispositivos em uma rede. O SNMP pode redefinir uma senha em um dispositivo de rede ou mudar sua configuração de linha de base. Ele também pode enviar solicitações aos dispositivos de rede para obter um relatório sobre a quantidade de largura de banda da rede que está sendo usada. No modelo TCP/IP, o SNMP ocorre na camada do aplicativo.
+
+- **O Protocolo de controle de transmissão/protocolo de Internet (TCP/IP)** é um protocolo de Internet usado por dispositivos para informar uns aos outros sobre erros de transmissão de dados na rede. O ICMP é usado por um dispositivo receptor para enviar um relatório ao dispositivo remetente sobre a transmissão de dados. O ICMP é comumente usado como uma forma rápida de solucionar problemas de conectividade e latência da rede, emitindo o comando "ping" em um sistema operacional Linux. No modelo TCP/IP, o ICMP ocorre na camada da Internet.
+
+###### Protocolos de segurança
+
+Os protocolos de segurança são protocolos de rede que garantem que os dados sejam enviados e recebidos com segurança em uma rede. Os protocolos de segurança usam algoritmos de criptografia para proteger os dados em trânsito. Abaixo estão alguns protocolos de segurança comuns.
+
+- **O Protocolo de transferência de hipertexto seguro (HTTPS)** é um protocolo de rede que fornece um método seguro de comunicação entre clientes e servidores de sites. O HTTPS é uma versão segura do HTTP que usa criptografia SSL/TLS (Secure Sockets Layer/Segurança da camada de transporte) em todas as transmissões para que agentes mal-intencionados não possam ler as informações contidas. O HTTPS usa a porta 443. No modelo TCP/IP, o HTTPS ocorre na camada do aplicativo.
+
+- **O Protocolo de Transferência de Arquivos (FTP)** é um protocolo seguro usado para transferir arquivos de um dispositivo para outro em uma rede. O SFTP usa o Secure Shell (SSH), normalmente pela porta TCP 22. O SSH usa o Padrão de Criptografia Avançada (AES) e outros tipos de criptografia para garantir que destinatários não intencionais não possam interceptar as transmissões. No modelo TCP/IP, o SFTP ocorre na camada do aplicativo. O SFTP é usado com frequência no armazenamento em Nuvem. Sempre que um usuário faz upload ou download de um arquivo do armazenamento em nuvem, o arquivo é transferido usando o protocolo SFTP.
+
+Observação: os protocolos de criptografia mencionados não ocultam o endereço IP de origem ou de destino do tráfego de rede. Isso significa que um agente mal-intencionado ainda pode saber algumas informações básicas sobre o tráfego de rede se o interceptar.
+
+#### Protocolos de rede adicionais
+
+##### Conversão de endereços de rede
+
+Os dispositivos da rede local de sua casa ou escritório têm um endereço IP privado que usam para se comunicar diretamente uns com os outros. No entanto, para que os dispositivos com endereços IP privados possam se comunicar com a Internet pública, eles precisam ter um único endereço IP público que represente todos os dispositivos da LAN para o público. Para mensagens de saída, o roteador pode substituir um endereço IP de origem privada por seu endereço IP público e realizar a operação inversa para as respostas. Esse processo é conhecido como NAT (Rede Address Translation, conversão de endereços de rede) e geralmente requer que um roteador ou firewall seja configurado especificamente para realizar o NAT. O NAT faz parte da camada 2 (camada de Internet) e da camada 3 (camada de transporte) do modelo TCP/IP.
+
+| Endereços IP privados | Endereços IP públicos |
+| --- | --- |
+| Atribuídos pelo roteador | Atribuídos pelo ISP e pela IANA |
+| Único somente dentro da rede privada | Endereço Único na Internet global |
+| Não há custo de uso | Custos de aluguel de um endereço IP público |
+| Intervalos de endereços: | Intervalos de endereços atribuíveis: |
+| - 10.0.0.0-10.255.255.255 | - 1.0.0.0-9.255.255.255 |
+| - 172.16.0.0-172.31.255.255 | - 11.0.0.0-126.255.255.255 |
+| - 192.168.0.0-192.168.255.255 | - 128.0.0.0-172.15.255.255 |
+| | - 172.32.0.0-192.167.255.255 |
+| | - 192.169.0.0-233.255.255.255 |
+
+##### Protocolo de configuração de host dinâmico (DHCP)
+
+O Protocolo de configuração de host dinâmico (DHCP) faz parte da família de gerenciamento de protocolos de rede. O DHCP é um protocolo de camada de aplicativo usado em uma rede para configurar dispositivos. Ele trabalha com o roteador para atribuir um endereço IP exclusivo a cada dispositivo e fornecer os endereços do servidor DNS e do gateway padrão apropriados para cada dispositivo. Os servidores DHCP operam na porta UDP 67, enquanto os clientes DHCP operam na porta UDP 68.
+
+##### Protocolo de resolução de endereço
+
+Até agora, você está familiarizado com os endereços IP e MAC. Você aprendeu que cada dispositivo em uma rede tem um endereço IP público, um endereço IP privado e um endereço MAC que o identificam na rede. O endereço IP de um dispositivo pode mudar com o tempo, mas o endereço MAC é permanente porque é exclusivo da Placa de interface de rede (NIC) do dispositivo. O endereço MAC é usado para se comunicar com dispositivos na mesma rede, mas, às vezes, o endereço MAC é desconhecido. É por isso que o protocolo de resolução de endereço (ARP) é necessário. O ARP é principalmente um protocolo de camada de acesso à rede no modelo TCP/IP usado para conversão de endereços de IP encontrados em pacotes de dados para o endereço MAC do dispositivo de hardware.
+
+Cada dispositivo na rede executa o ARP e mantém o controle dos endereços IP e MAC correspondentes em um cache de ARP. O ARP não tem um número de porta específico, pois é um protocolo da camada 2 e os números de porta estão associados à camada 7 do aplicativo.
+
+##### Telnet
+
+O Telnet é um protocolo da camada do aplicativo usado para se conectar a um sistema remoto. A Telnet envia todas as informações em texto claro. Ele usa linhas de comando para controlar outro dispositivo, semelhante ao SSH (secure shell), mas o Telnet não é tão seguro quanto o SSH. A Telnet pode ser usada para se conectar a dispositivos locais ou remotos e usa a porta TCP 23.
+
+##### Secure Shell
+
+O protocolo Secure Shell (SSH) é usado para criar uma conexão segura com um sistema remoto. Esse protocolo da camada do aplicativo fornece uma alternativa para autenticação segura e comunicação criptografada. O SSH opera pela porta TCP 22 e é um substituto para protocolos menos seguros, como o Telnet.
+
+##### Protocolo Post Office
+
+O Post Office Protocol (POP) é um protocolo da camada do aplicativo (camada 4 do modelo TCP/IP) usado para gerenciar e recuperar e-mails de um servidor de e-mail. O POP3 é a versão mais comumente usada do POP. Muitas organizações têm um servidor de e-mail dedicado na rede que lida com a entrada e saída de e-mails para os usuários da rede. Os dispositivos dos usuários enviarão solicitações ao servidor de e-mail remoto e farão download de mensagens de e-mail localmente. Se você já atualizou seu aplicativo de e-mail e recebeu novos e-mails na sua caixa de entrada, está experimentando o POP e o protocolo de acesso a mensagens da Internet (IMAP) em ação. A autenticação de texto simples não criptografada usa a porta TCP/UDP 110 e os e-mails criptografados usam a Camada de soquetes seguros (SSL) pela porta TCP/UDP 995. Ao usar o POP, o e-mail precisa terminar o download em um dispositivo local antes de poder ser lido. Após o download, o e-mail pode ou não ser excluído do servidor de e-mail, portanto, não garante que um usuário possa sincronizar o mesmo e-mail em vários dispositivos.
+
+##### Protocolo de acesso a mensagens da Internet (IMAP)
+
+O IMAP é usado para e-mails recebidos. Ele baixa os Cabeçalhos dos e-mails e o conteúdo da mensagem. O conteúdo também permanece no servidor de e-mail, o que permite que os usuários acessem seus e-mails de vários dispositivos. O IMAP usa a porta TCP 143 para e-mail não criptografado e a porta TCP 993 sobre o protocolo TLS. O uso do IMAP permite que os usuários leiam parcialmente o e-mail antes de terminar o download. Como o e-mail é mantido no servidor de e-mail, ele permite que o usuário sincronize e-mails em vários dispositivos. 
+
+##### Protocolo de transferência de correio simples (SMTP)
+
+O SMTP (Protocolo de transferência de correio simples (SMTP)) é usado para transmitir e rotear e-mails do remetente para o endereço do destinatário. O SMTP funciona com o software Message Transfer Agent (MTA), que pesquisa nos servidores DNS para resolver endereços de e-mail para endereços IP, a fim de garantir que os e-mails cheguem ao destino pretendido. O SMTP usa a porta TCP/UDP 25 para e-mails não criptografados e a porta TCP/UDP 587 usando TLS para e-mails criptografados. A porta TCP 25 é frequentemente usada por Spam de alto volume. O SMTP ajuda a filtrar o spam regulando a quantidade de e-mails que uma fonte pode enviar por vez.
+
+##### Protocolos e números de porta
+
+Lembre-se de que os números das portas são usados pelos dispositivos de rede para determinar o que deve ser feito com as informações contidas em cada pacote de dados quando eles chegam ao destino. Os firewalls podem filtrar o tráfego indesejado com base nos números das portas. Por exemplo, uma organização pode configurar um firewall para permitir apenas o acesso à porta TCP 995 (POP3) por endereços IP pertencentes à organização.
+
+AS Como analista de segurança, você precisará conhecer muitos dos protocolos e números de porta mencionados neste curso. Eles podem ser usados para determinar seu conhecimento técnico em entrevistas, portanto, é uma boa ideia memorizá-los. Você também aprenderá sobre novos protocolos no trabalho em uma posição de segurança.
+
+##### Principais lições
+
+Como analista de segurança cibernética, você encontrará vários protocolos comuns em seu trabalho diário. Os protocolos abordados nesta leitura incluem NAT, DHCP, ARP, Telnet, SSH, POP3, IMAP e SMTP. É igualmente importante entender onde cada protocolo está estruturado no modelo TCP/IP e quais portas eles ocupam.
+
+| Protocolo | Porta |
+|-----------|-------|
+| DHCP | Porta UDP 67 (servidores) <br>Porta UDP 68 (clientes) |
+| ARP | nenhum |
+| Telnet | TCP porta 23 |
+| SSH | TCP porta 22 |
+| POP3 | Porta TCP/UDP 110 (não criptografada) <br>TCP/UDP porta 995 (criptografia, SSL/TLS) |
+| IMAP | Porta TCP 143 (não criptografada) <br>TCP porta 993 (criptografia, SSL/TLS) |
+| SMTP | TCP/UDP porta 25 (não criptografada) |
+| SMTPS | TCP/UDP porta 587 (criptografia, TLS) |
+
+#### A evolução dos protocolos de segurança sem fio
+
+##### Introdução aos protocolos de comunicação sem fio
+
+Atualmente, muitas pessoas se referem à Internet sem fio como **Wi-Fi**. Wi-Fi refere-se a um conjunto de padrões que definem a comunicação para LANs sem fio. Wi-Fi é um termo de marketing encomendado pela WECA (Wireless Ethernet Compatibilidade Alliance). Desde então, a WECA mudou o nome de sua organização para Wi-Fi Alliance.
+
+Os padrões e protocolos Wi-Fi são baseados na família 802.11 de padrões de comunicação da Internet determinados pelo IEEE (Institute of Electrical and Electronics Engineers). Portanto, como analista de segurança, você também poderá ver o Wi-Fi ser chamado de IEEE 802.11.
+
+As comunicações Wi-Fi são protegidas por protocolos de rede de computadores sem fio. Os protocolos de segurança sem fio evoluíram ao longo dos anos, ajudando a identificar e resolver vulnerabilidades com tecnologias sem fio mais avançadas.
+
+Nesta leitura, você aprenderá sobre a evolução dos protocolos de segurança sem fio de WEP para WPA, WPA2 e WPA3. Você também aprenderá como o Protocolo de Aplicativos Sem Fio foi usado para comunicações móveis pela Internet.
+
+##### Privacidade equivalente à de redes
+
+Privacidade equivalente à de redes com fio (WEP) é um protocolo de segurança de rede sem fio projetado para fornecer aos usuários o mesmo nível de privacidade em conexões de rede sem fio que eles têm em conexões de rede com fio. O WEP foi desenvolvido em 1999 e é o mais antigo dos padrões de segurança sem fio.
+
+Atualmente, o WEP está em grande parte fora de uso, mas os analistas de segurança ainda devem entender o WEP caso se deparem com ele. Por exemplo, um roteador de rede pode ter usado o WEP como protocolo de segurança padrão e o administrador da rede nunca o alterou. Ou os dispositivos em uma rede podem ser muito antigos para suportar protocolos de segurança de Wi-Fi mais recentes. No entanto, um agente mal-intencionado poderia quebrar a criptografia WEP, portanto, agora é considerado um protocolo de segurança de alto risco.
+
+##### Wi-Fi Protected Access
+
+O Wi-Fi Protected Access (WPA) foi desenvolvido em 2003 para aprimorar o WEP, resolver os problemas de segurança que ele apresentava e substituí-lo. O WPA sempre foi planejado para ser uma medida de transição, de modo que a compatibilidade com versões anteriores pudesse ser estabelecida com hardware mais antigo.
+
+As falhas do WEP estavam no próprio protocolo e em como a criptografia era usada. O WPA abordou esse ponto fraco usando um protocolo chamado TKIP (Temporal Key Integrity Protocol). O algoritmo de criptografia WPA usa chaves secretas maiores que as do WEP, o que torna mais difícil adivinhar a chave por tentativa e erro.
+
+O WPA também inclui uma verificação de integridade da mensagem que inclui uma tag de autenticação de mensagem em cada transmissão. Se um agente mal-intencionado tentar alterar a transmissão de alguma forma ou reenviá-la em outro momento, a verificação de integridade da mensagem do WPA identificará o ataque e rejeitará a transmissão.
+
+Apesar dos aprimoramentos de segurança do WPA, ele ainda tem vulnerabilidades. Agentes mal-intencionados podem usar um ataque de reinstalação de chave (ou ataque KRACK) para descriptografar transmissões usando o WPA. Os atacantes podem se inserir no processamento do handshake de autenticação do WPA e inserir uma nova chave de criptografia em vez da chave dinâmica atribuída pelo WPA. Se eles definirem a nova chave com todos os zeros, é como se a transmissão não fosse criptografada.
+
+Devido a essa vulnerabilidade significativa, o WPA foi substituído por uma versão atualizada do protocolo chamada WPA2.
+
+##### WPA2 E WPA3
+
+###### WPA2
+
+A segunda versão do Wi-Fi Protected Access, conhecida como WPA2, foi lançada em 2004. O WPA2 aprimora o WPA usando o Padrão de Criptografia Avançada (AES). O WPA2 também aprimora o uso do TKIP pelo WPA. O WPA2 usa o protocolo CCMP (Counter Mode Cifra de bloco encadeada para autenticação de mensagens), que fornece encapsulamento e garante a autenticação e a integridade das mensagens. Devido à força do WPA2, ele é considerado o padrão de segurança para todas as transmissões Wi-Fi atuais. O WPA2, como seu antecessor, é vulnerável a ataques KRACK. Isso levou ao desenvolvimento do WPA3 em 2018.
+
+###### Personalização
+
+O modo pessoal do WPA2 é mais adequado para redes de computadores domésticas por vários motivos. É fácil de implementar e a configuração inicial leva menos tempo para a versão pessoal do que para a versão corporativa. A frase secreta global da versão pessoal do WPA2 precisa ser aplicada a cada computador e ponto de acesso (PA) em uma rede. Isso a torna ideal para redes de computadores domésticas, mas impossível de gerenciar em organizações.
+
+###### Empresarial
+
+O modo WPA2 Enterprise funciona melhor para aplicativos comerciais. Ele fornece a segurança necessária para redes sem fio em ambientes comerciais. A configuração inicial é mais complicada que a do modo pessoal WPA2, mas o modo enterprise oferece controle individualizado e centralizado sobre o acesso Wi-Fi a uma rede de computadores. Isso significa que os administradores de rede podem conceder ou remover o acesso de usuários a uma rede a qualquer momento. Os usuários nunca têm acesso às chaves de criptografia, o que impede que possíveis atacantes recuperem as chaves de rede de computadores individuais.
+
+###### WPA3
+
+O WPA3 é um protocolo Wi-Fi seguro e está crescendo em uso à medida que mais dispositivos compatíveis com o WPA3 são lançados. Estas são as principais diferenças entre o WPA2 e o WPA3:
+
+- O WPA3 aborda a vulnerabilidade do handshake de autenticação para ataques KRACK, que é apresentada no WPA2.
+- O WPA3 usa Simultaneous Authentication of Equals (SAE), um acordo de compartilhamento de chave de cifra autenticado por senha. Isso impede que os atacantes baixem os dados das conexões de rede sem fio para seus sistemas e tentem decodificá-los.
+- O WPA3 aumentou a criptografia para tornar as senhas mais seguras, usando criptografia de 128 bits, com o modo WPA3-Enterprise oferecendo criptografia opcional de 192 bits.
+
+#### Sub-rede e CIDR
+
+##### Visão geral da sub-rede
+
+A sub-rede é o processo de pegar uma rede grande e dividi-la em vários grupos menores e organizados, chamados sub-redes. Pense nisso da seguinte forma: Se a rede de sua empresa é uma cidade grande, cada sub-rede é um bairro distinto dentro dessa cidade.
+
+A sub-rede divide um intervalo de endereços de rede em sub-redes menores dentro da rede. Essas sub-redes organizadas são definidas pela combinação exclusiva do endereço IP e da máscara de sub-rede atribuída a cada dispositivo, criando efetivamente uma "rede dentro de uma rede" A sub-rede cria uma rede de dispositivos para funcionar como sua própria rede. Isso torna a rede mais eficiente e também pode ser usado para criar zonas de segurança. Se os dispositivos na mesma sub-rede se comunicam entre si, o interruptor altera as transmissões para que permaneçam na mesma sub-rede, melhorando a velocidade e a eficiência das comunicações.
+
+![Duas sub-redes para duas redes conectadas a um roteador.](./public/img/sub_redes.png)
+
+##### Notação de roteamento interdomínio sem classe para sub-rede
+
+O CIDR (Classless Inter-Domain Routing, roteamento entre domínios sem classe) é um método de atribuição de máscaras de sub-rede a endereços IP para criar uma sub-rede. O endereçamento sem classe substitui o endereçamento com classe. O endereçamento classful foi usado na década de 1980 como um sistema de agrupamento de endereços IP em classes (Classe A a Classe E). Cada classe incluía um número limitado de endereços IP, que foram esgotados à medida que o número de dispositivos conectados à Internet ultrapassou o intervalo de classes na década de 1990. O endereçamento CIDR sem classes expandiu o número de endereços IPv4 disponíveis.
+
+O CIDR permite que os profissionais de segurança cibernética segmentem as redes classful em pedaços menores. Os endereços IP CIDR são formatados como os endereços IPv4, mas incluem uma barra ("/") seguida de um número no final do endereço. Esse número extra é chamado de prefixo de rede IP. Por exemplo, um endereço IPv4 normal usa o formato 198.51.100.0, enquanto um endereço IP CIDR incluiria o prefixo de rede IP no final do endereço, 198.51.100.0/24. Esse endereço CIDR abrange todos os endereços IP entre 198.51.100.0 e 198.51.100.255. O sistema de endereçamento CIDR reduz o número de entradas nas tabelas de roteamento e fornece mais endereços IP disponíveis nas redes. Você pode tentar converter CIDR em endereços IPv4 e vice-versa por meio de uma ferramenta de conversão on-line, como o [IPAddressGuide](https://www.ipaddressguide.com/), para praticar e entender melhor esse conceito.
+
+**Observação**: por enquanto, concentre-se em entender o conceito de CIDR como um método de endereçamento flexível usado para a sub-rede moderna. Um mergulho mais profundo na matemática técnica do CIDR é uma habilidade valiosa que você pode desenvolver em treinamentos futuros, se necessário.
+
+##### Benefícios da sub-rede para a segurança
+
+A sub-rede permite que os profissionais e analistas de rede criem uma rede dentro de sua própria rede sem solicitar outro endereço IP de rede ao provedor de acesso à Internet. Esse processo usa a largura de banda da rede com mais eficiência e melhora o desempenho da rede. A sub-rede é um componente da criação de sub-redes isoladas por meio de isolamento físico, configuração de roteamento e firewalls.
+
+#### Redes virtuais e privacidade
+
+##### Protocolos de rede comuns
+
+Os protocolos de rede são usados para direcionar o tráfego para o dispositivo e o serviço corretos, dependendo do tipo de comunicação que está sendo realizada pelos dispositivos na rede. Os protocolos são as regras usadas por todos os dispositivos de rede que fornecem uma base mutuamente acordada sobre como transferir dados em uma rede.
+
+Há três categorias principais de protocolos de rede: protocolos de comunicação, protocolos de gerenciamento e protocolos de segurança.
+
+- Os protocolos de comunicação são usados para estabelecer conexões entre servidores. Os exemplos incluem TCP, UDP e SMTP (Protocolo de Transferência de Correio Simples), que fornece um framework para comunicação por e-mail.
+- Os protocolos de gerenciamento são usados para solucionar problemas de rede. Um exemplo é o Protocolo de Mensagens de Controle da Internet (ICMP).
+- Os protocolos de segurança fornecem criptografia de dados em trânsito. Os exemplos incluem IPsec e SSL/TLS.
+
+Alguns outros protocolos comumente usados são:
+
+- HyperText Transfer Protocol (HTTP). O HTTP é um protocolo de comunicação da camada do aplicativo. Ele permite que o navegador e o servidor da Web se comuniquem entre si.
+- Sistema de Nomes de Domínio (DNS). O DNS é um protocolo da camada do aplicativo que traduz, ou mapeia, nomes de host para endereços IP.
+- Protocolo de resolução de endereço (ARP). O ARP é um protocolo de comunicação da camada de rede que mapeia os endereços IP para máquinas físicas ou um endereço MAC reconhecido na rede local.
+
+##### Wi-Fi
+
+Esta seção do curso também apresentou vários protocolos de segurança sem fio, incluindo WEP, WPA, WPA2 e WPA3. O WPA3 criptografa o tráfego com o Padrão de Criptografia Avançada (AES) à medida que ele viaja do seu dispositivo para o ponto de acesso sem fio. O WPA2 e o WPA3 oferecem dois modos: pessoal e empresarial. O modo Personalização é mais adequado para redes domésticas, enquanto o modo Empresarial é geralmente utilizado para redes e aplicativos comerciais.
+
+##### Ferramentas e práticas de segurança de rede
+
+###### Firewalls
+
+Anteriormente, você aprendeu que os firewalls são dispositivos de virtualização de rede (NVAs) ou dispositivos de hardware que inspecionam e podem filtrar o tráfego de rede antes que ele tenha permissão para entrar na rede privada. Os firewalls tradicionais são configurados com regras que informam quais tipos de pacotes de dados são permitidos com base no número da porta e no endereço IP do pacote de dados.
+
+Há duas categorias principais de firewalls.
+
+- Stateless: Uma classe de firewall que opera com base em regras predefinidas e não mantém o controle das informações dos pacotes de dados
+- Stateful: Uma classe de firewall que controla as informações que passam por ele e filtra proativamente as ameaças. Ao contrário dos firewalls sem estado, que exigem que as regras sejam configuradas em duas direções, um firewall com estado só exige uma regra em uma direção. Isso ocorre porque ele usa uma "tabela de estado" para rastrear as conexões, de modo que possa corresponder o tráfego de retorno a uma sessão existente
+
+Os firewalls de próxima geração (NGFWs) são a proteção de firewall mais avançada tecnologicamente. Eles excedem a segurança oferecida pelos firewalls com estado porque incluem inspeção profunda de pacotes (um tipo de interceptação de pacotes que examina os pacotes de dados e toma medidas se houver ameaças) e recursos de prevenção de intrusão que detectam ameaças à segurança e notificam os administradores do firewall. Os NGFWs podem inspecionar o Tráfego na camada do aplicativo do modelo TCP/IP e, em geral, são sensíveis ao aplicativo. Ao contrário dos firewalls tradicionais, que bloqueiam o tráfego com base no endereço IP e nas portas, as regras dos NGFWs podem ser configuradas para bloquear ou permitir o tráfego com base no aplicativo. Alguns NGFWs têm recursos adicionais, como Malware Sandboxing, Antivírus de Rede e Filtragem de URL e DNS.
+
+###### Servidores proxy
+
+Um servidor proxy é outra maneira de adicionar segurança à sua rede privada. Os servidores proxy utilizam a conversão de endereços de rede (NAT) para servir como uma barreira entre os clientes da rede e as ameaças externas. Os proxies avançados lidam com consultas de clientes internos quando eles acessam recursos externos à rede. Os proxies reversos funcionam de forma oposta aos proxies diretos; eles lidam com solicitações de sistemas externos para serviços na rede interna. Alguns servidores proxy também podem ser configurados com regras, como um firewall. Por exemplo, você pode criar filtros para bloquear sites identificados como contendo malware.
+
+###### Redes privadas virtuais (VPN)
+
+Uma VPN é um serviço que criptografa os dados em trânsito e disfarça seu endereço IP. As VPNs usam um processamento chamado Encapsulamento. O encapsulamento envolve seus dados não criptografados em um pacote de dados criptografado, o que permite que seus dados sejam enviados pela rede pública e permaneçam anônimos. As empresas e outras organizações usam VPNs para ajudar a proteger as comunicações dos dispositivos dos usuários com os recursos corporativos. Alguns desses recursos incluem servidores ou máquinas virtuais que hospedam aplicativos comerciais. As personalizações também usam VPNs para aumentar a privacidade pessoal. As VPNs protegem a privacidade do usuário ocultando informações pessoais, inclusive endereços IP, de servidores externos. Uma VPN de boa reputação também minimiza seu próprio acesso à atividade do usuário na Internet usando criptografia forte e outras medidas de segurança. As organizações estão usando cada vez mais uma combinação de recursos de VPN e SD-WAN para proteger suas redes. Uma rede de longa distância definida por software (SD-WAN) é um serviço de WAN virtual que permite que as organizações conectem com segurança os usuários a aplicativos em vários locais e em grandes distâncias geográficas.
+
+#### Protocolos VPN: Wireguard e IPSec
+
+##### Acesso remoto e VPNs site a site
+
+Os usuários individuais usam VPNs de acesso remoto para estabelecer uma conexão entre um dispositivo pessoal e um servidor VPN. As VPNs de acesso remoto criptografam os dados enviados ou recebidos por meio de um dispositivo pessoal. A conexão entre o usuário e a VPN de acesso remoto é estabelecida pela Internet.
+
+As empresas usam VPNs site a site principalmente para estender sua rede a outras redes e locais. Isso é particularmente útil para organizações que têm muitos escritórios em todo o mundo. O IPsec é comumente usado em VPNs site a site para criar um túnel criptografado entre a rede principal e a rede remota. Uma desvantagem das VPNs site a site é a complexidade de configuração e gerenciamento em comparação com as VPNs remotas.
+
+##### VPN WireGuard vs. VPN IPsec
+
+O WireGuard e o IPSec são dois protocolos de VPN diferentes usados para criptografar o tráfego em um túnel de rede seguro. A maioria dos provedores de VPN oferece uma variedade de opções de protocolos de VPN, como WireGuard ou IPsec. Em última análise, a escolha entre IPSec e WireGuard depende de muitos fatores, incluindo velocidades de conexão, Compatibilidade com a Infraestrutura de rede existente e necessidades comerciais ou individuais.
+
+###### VPN WireGuard
+
+O WireGuard é um protocolo VPN de alta velocidade, com criptografia avançada, para proteger os usuários quando estiverem acessando a Internet. Ele foi projetado para ser simples de configurar e manter. O WireGuard pode ser usado tanto para conexão site a site quanto para conexões cliente-servidor. O WireGuard é relativamente mais novo que o IPsec e é usado por muitas pessoas devido ao fato de que sua velocidade de download é aprimorada pelo uso de menos linhas de código. O WireGuard também é um código aberto, o que facilita a implantação e a depuração pelos usuários. Esse protocolo é útil para processos que exigem velocidades de download mais rápidas, como streaming de conteúdo de vídeo ou download de arquivos grandes.
+
+###### VPN IPSec
+
+O IPSec é outro protocolo de VPN que pode ser usado para configurar VPNs. A maioria dos provedores de VPN usa o IPSec para criptografar e autenticar pacotes de dados a fim de estabelecer conexões seguras e criptografadas. Como o IPSec é um dos primeiros protocolos de VPN, muitos sistemas operacionais suportam o IPSec dos provedores de VPN.
+
+Embora o IPSec e o WireGuard sejam ambos protocolos VPN, o IPSec é mais antigo e mais complexo que o WireGuard. Alguns clientes podem preferir o IPSec devido ao seu histórico de uso mais longo, testes de segurança extensivos e adoção generalizada. Entretanto, outros podem preferir o WireGuard devido ao seu potencial de melhor desempenho e configuração mais simples.
+
+### Modulo 3: Segurança contra invasores de rede
+
+#### Como as invasões comprometem seu sistema
+
+##### Ataques de interceptação de rede
+
+Os ataques de interceptação de rede funcionam interceptando o tráfego de rede e roubando informações valiosas ou interferindo na transmissão de alguma forma.
+
+Os agentes mal-intencionados podem usar ferramentas de hardware ou software para capturar e inspecionar dados em trânsito. Isso é chamado de **interceptação de pacotes**. Além de ver informações às quais não têm direito, os agentes mal-intencionados também podem interceptar o tráfego de rede e alterá-lo. Esses ataques podem causar danos a uma organização. Esses ataques podem causar danos à rede de uma organização inserindo modificações de código malicioso ou alterando a mensagem e interrompendo as operações da rede. Por exemplo, um invasor pode interceptar uma transferência bancária e alterar a conta que recebe os fundos para uma que o invasor controla.
+
+Mais adiante neste curso, você aprenderá mais sobre interceptação maliciosa de pacotes e outros tipos de ataques de interceptação de rede: ataques on-path e ataques de repetição.
+
+##### Ataques de backdoor
+
+Um **ataque backdoor** é outro tipo de ataque do qual você precisa estar ciente como analista de segurança. Uma organização pode ter várias medidas de segurança em vigor, incluindo câmeras, verificações biométricas e códigos de acesso, para garantir que os funcionários não entrem e saiam sem serem vistos. No entanto, um funcionário pode contornar as medidas de segurança encontrando uma porta dos fundos do edifício que não seja tão fortemente monitorada, o que lhe permite sair sorrateiramente à tarde sem ser visto.
+
+Em segurança cibernética, backdoors são pontos fracos deixados intencionalmente por programadores ou administradores de sistemas e redes que contornam os mecanismos normais de controle de acesso. As backdoors têm o objetivo de ajudar os programadores a realizar a solução de problemas ou tarefas administrativas. No entanto, as backdoors também podem ser instaladas por invasores depois que eles comprometem uma organização para garantir que tenham acesso persistente.
+
+Depois que o hacker entra em uma rede insegura por meio de um backdoor, ele pode causar grandes danos: instalar malware, realizar um ataque de negação de serviço (DoS), roubar informações privadas ou alterar outras configurações de segurança que deixam o sistema vulnerável a outros ataques. Um ataque **DoS** é um ataque que tem como alvo uma rede ou um servidor e o inunda com tráfego de rede.
+
+##### Possíveis impactos em uma organização
+
+Como você já aprendeu, os ataques à rede podem ter um impacto negativo significativo em uma organização. Vamos examinar algumas possíveis consequências.
+
+- **Financeiras**: Quando um sistema é colocado off-line com um ataque DoS ou outra tática, ele impede que a empresa realize tarefas que geram receita. Dependendo do tamanho da organização, as operações interrompidas podem custar milhões de dólares. Os custos de reparação para reconstruir a infraestrutura de software e pagar grandes somas associadas a um possível ransomware podem ser financeiramente difíceis. Além disso, se um agente mal-intencionado obtiver acesso às informações pessoais dos clientes ou consumidores da empresa, a empresa poderá enfrentar pesados custos de litígio e liquidação se os clientes recorrerem à justiça.
+
+- **Reputação**: Os ataques também podem ter um impacto negativo sobre a reputação de uma organização. Se for de conhecimento público que uma empresa sofreu um ataque cibernético, o público poderá ficar preocupado com as práticas de segurança da organização. Ele pode deixar de confiar suas informações pessoais à empresa e escolher um concorrente para atender às suas necessidades.
+
+- **Segurança pública**: Se ocorrer um ataque em uma rede governamental, isso pode afetar a segurança e o bem-estar dos cidadãos de um país. Nos últimos anos, as agências de defesa de todo o mundo estão investindo pesadamente no combate às táticas de guerra cibernética. Se um agente mal-intencionado obtivesse acesso a uma rede de poder, a um sistema público de água ou até mesmo a um sistema de comunicação de defesa militar, o público poderia sofrer danos físicos devido a um ataque de intrusão de rede.
+
+#### Ler os registros do tcpdump
+
+Um **analisador de protocolo de rede**, às vezes chamado de sniffer de pacotes ou analisador de pacotes, é uma ferramenta projetada para a captura e a análise do pacote de dados em uma rede. Eles são comumente usados como ferramentas de investigação para monitorar redes e identificar atividades suspeitas. Há uma grande variedade de analisadores de protocolos de rede disponíveis, mas alguns dos analisadores mais comuns incluem:
+
+- Analisador de Tráfego SolarWinds NetFlow
+- ManageEngine OpManager
+- Observador de rede do Azure
+- Wireshark
+- tcpdump
+
+Esta leitura se concentrará exclusivamente no tcpdump, embora você possa aplicar o que aprendeu aqui a muitos dos outros analisadores de protocolo de rede que usará como analista de segurança cibernética para se defender contra qualquer invasão de rede. Em uma próxima atividade, você analisará um registro de tráfego de dados do tcpdump e identificará um ataque DoS para praticar essas habilidades. 
+
+##### tcpdump
+
+O **tcpdump** é um analisador de protocolo de rede de linha de comando. Ele é popular, leve - o que significa que usa pouco espaço e tem baixo uso da memória - e usa a biblioteca libpcap de código aberto. O tcpdump é baseado em texto, o que significa que todos os comandos do tcpdump são executados no terminal. Ele também pode ser instalado em outros sistemas operacionais baseados em Unix, como o macOS®. Ele vem pré-instalado em muitas distribuições Linux.
+
+O tcpdump fornece uma breve análise de pacotes e converte as principais informações sobre o Tráfego de rede em formatos facilmente lidos por humanos. Ele imprime informações sobre cada pacote diretamente em seu terminal. O tcpdump também exibe o endereço IP de origem, os endereços IP de destino e os números de porta que estão sendo usados nas comunicações. 
+
+##### Interpretação da saída
+
+O tcpdump imprime a saída do comando como interceptação de pacotes na linha de comando e, opcionalmente, em um arquivo de log, depois que um comando é executado. A saída de uma captura de pacote contém muitas informações importantes sobre o Tráfego de rede.
+
+![Tipos de informações apresentadas em uma captura de pacote do tcpdump.](./public/img/tcpdump.png)
+
+Algumas informações que você recebe de uma captura de pacote incluem:
+
+- Registro de data e hora: A saída começa com o registro de data e hora, formatado como horas, minutos, segundos e frações de segundo.
+- IPS de origem: a origem do pacote é fornecida por seu endereço IP de origem.
+- Porta de origem: Esse número de porta é o local de origem do pacote.
+- IP de destino: o endereço IP de destino é o local para onde o pacote está sendo transmitido.
+- Porta de destino: Esse número de porta é o local para onde o pacote está sendo transmitido.
+
+Observação: por padrão, o tcpdump tentará resolver os endereços de host para nomes de host. Ele também substituirá os números de porta por serviços comumente associados que usam essas portas.
+
+##### Usos comuns
+
+O tcpdump e outros analisadores de protocolo de rede são comumente usados para capturar e visualizar comunicações de rede e para coletar estatísticas sobre a rede, como na solução de problemas de desempenho da rede. Eles também podem ser usados para:
+
+- Estabelecer uma Linha de Base para padrões de tráfego de rede e Métricas de utilização de rede.
+- Detectar e identificar tráfego malicioso
+- Criar alertas personalizados para enviar as notificações certas quando surgirem problemas de rede ou ameaças à segurança.
+- Localizar mensagens instantâneas (IM), tráfego ou pontos de acesso sem fio não autorizados.
+
+No entanto, os atacantes também podem usar os analisadores de protocolo de rede de forma maliciosa para obter informações sobre uma rede específica. Por exemplo, os atacantes podem capturar pacotes de dados que contenham informações confidenciais, como nomes de usuário e senhas de contas. AS como analista de segurança cibernética, é importante entender a finalidade e os usos dos analisadores de protocolo de rede.
+
+#### Ataque DDoS na vida real
+
+##### Um DDoS direcionado a um servidor DNS amplamente utilizado
+
+Nos vídeos anteriores, você aprendeu sobre a Função de um servidor DNS. AS, os servidores DNS traduzem os nomes de domínio do site para o endereço IP do sistema que contém as informações do site. Por exemplo, se um usuário digitar o URL de um site, um servidor DNS o traduzirá em um endereço IP numérico que direciona o tráfego de rede para o local do servidor do site.
+
+No dia do ataque DDoS que estamos estudando, muitas grandes empresas estavam usando um provedor de serviços de DNS. O provedor de serviços estava hospedando o sistema DNS para essas empresas. Isso significava que, quando os usuários da Internet digitavam a URL do site que queriam acessar, seus dispositivos eram direcionados para o lugar certo. Em 21 de outubro de 2016, o provedor de serviços foi vítima de um ataque DDoS.
+
+##### Lead antes do ataque
+
+Antes do ataque ao provedor de serviços, um grupo de estudantes universitários criou um **botnet** com a intenção de atacar vários servidores e redes de computadores de jogos. Um botnet é uma coleção de computadores infectados por malware que estão sob o Controle de um único agente de ameaça, conhecido como "bot-herder" Cada computador da botnet pode ser controlado remotamente para enviar um pacote de dados a um sistema-alvo. Em um ataque de botnet, os criminosos cibernéticos instruem todos os bots da botnet a enviar pacotes de dados para o sistema-alvo ao mesmo tempo, resultando em um ataque DDoS.
+
+O grupo de estudantes universitários publicou o código da botnet on-line para que fosse Acessível a milhares de usuários da Internet e para que as Autoridades não pudessem rastrear a botnet até os estudantes. Ao fazer isso, eles possibilitaram que outros agentes mal-intencionados aprendessem o código da botnet e a controlassem remotamente. Isso incluiu os criminosos cibernéticos que atacaram o provedor de serviços DNS.
+
+##### O dia do ataque
+
+Às 7h da manhã do dia do ataque, o botnet enviou dezenas de milhões de solicitações de DNS ao provedor de serviços. Isso sobrecarregou o sistema e o serviço de DNS foi desligado. Isso significava que todos os sites que usavam o provedor de serviços não podiam ser acessados. Quando os usuários tentavam acessar vários sites que usavam o provedor de serviços, eles não eram direcionados para o site digitado no navegador. As interrupções de cada serviço da Web ocorreram em toda a América do Norte e Europa.
+
+Os sistemas do provedor de serviços foram restaurados após apenas duas horas de inatividade. Embora os criminosos cibernéticos tenham enviado ondas subsequentes de ataques de botnet, a empresa de DNS estava preparada e conseguiu atenuar o impacto. 
+
+#### Visão geral das táticas de interceptação
+
+##### Uma análise mais detalhada da interceptação de pacotes
+
+Se você aprendeu em um vídeo anterior, o **sniffing de pacotes** é a prática de captura e interceptação de pacotes de dados em uma rede. Em uma rede privada, os pacotes de dados são direcionados para o dispositivo de destino correspondente na rede.
+
+A **Placa de interface de rede (NIC)** do dispositivo é uma peça de hardware que conecta o dispositivo a uma rede. A NIC lê a transmissão de dados e, se ela contiver o endereço MAC do dispositivo, aceita o pacote e o envia ao dispositivo para processar as informações com base no protocolo. Isso ocorre em todas as operações de rede padrão. Entretanto, uma NIC pode ser configurada para o modo promíscuo, o que significa que ela aceita todo o Tráfego na rede, mesmo os pacotes que não são endereçados ao dispositivo da NIC. Você aprenderá mais sobre as NICs mais adiante no programa. Agentes mal-intencionados podem usar softwares como o Wireshark para capturar os dados em uma rede privada e armazená-los para uso posterior. Em seguida, eles podem usar as informações pessoais em seu próprio benefício. Como alternativa, eles podem usar os endereços IP e MAC de usuários autorizados da rede privada para realizar o spoofing de IP.
+
+##### Uma análise mais detalhada do spoofing de IPS
+
+Depois que um agente mal-intencionado intercepta pacotes na rede, ele pode se passar por endereços IP e MAC de dispositivos autorizados para realizar um ataque de spoofing de IP. Os firewalls podem evitar ataques de spoofing de IP configurando-os para recusar pacotes IP não autorizados e tráfego suspeito. A seguir, você examinará alguns ataques comuns de spoofing de IP com os quais é importante estar familiarizado como analista de segurança.
+
+###### Ataque no caminho
+
+Um **ataque on-path** ocorre quando um hacker intercepta a comunicação entre dois dispositivos ou servidores que têm uma relação de confiança. A transmissão entre esses dois dispositivos de rede confiáveis pode conter informações valiosas, como nomes de usuário e senhas, que o agente mal-intencionado pode coletar. Um ataque no caminho às vezes é chamado de ataque man-in-the-middle porque o hacker está escondido no meio da comunicação entre duas partes confiáveis.
+
+Ou pode ser que a transmissão interceptada contenha uma consulta ao sistema DNS. Você deve se lembrar de um vídeo anterior que um servidor DNS traduz nomes de domínio de sites em endereços IP. Se um agente mal-intencionado interceptar uma transmissão que contenha uma pesquisa de DNS, ele poderá spoofing a resposta de DNS do servidor e redirecionar um nome de domínio para um endereço IP diferente, talvez um que contenha código mal-intencionado ou outras ameaças. A maneira mais importante de se proteger contra um ataque no caminho é criptografar seus dados em trânsito, por exemplo, usando TLS. 
+
+###### Ataque smurf
+
+Um **ataque smurf** é um ataque de rede realizado quando um invasor descobre o endereço IP de um usuário autorizado e o inunda com pacotes. Quando o pacote spoofing atinge o endereço de transmissão, ele é enviado a todos os dispositivos e servidores da rede.
+
+Em um ataque smurf, o spoofing de IP é combinado com outra técnica de negação de serviço (DoS) para inundar a rede com tráfego indesejado. Por exemplo, o pacote spoofing pode incluir um ping do Protocolo de Mensagens de Controle da Internet (ICMP). Como você aprendeu anteriormente, o ICMP é usado para solucionar problemas em uma rede. Mas se muitas mensagens ICMP forem transmitidas, as respostas de eco ICMP sobrecarregarão os servidores da rede e eles serão desligados. Isso cria uma negação de serviço e pode interromper as operações de uma organização.
+
+Uma maneira importante de se proteger contra um ataque smurf é usar um firewall avançado que possa monitorar qualquer tráfego incomum na rede. A maioria dos firewalls de próxima geração (NGFW) inclui recursos que detectam anomalias na rede para garantir que as transmissões de tamanho excessivo sejam detectadas antes que tenham a chance de derrubar a rede.
+
+###### Ataque DoS
+
+Como você aprendeu, depois que o agente mal-intencionado fareja o Tráfego de rede, ele pode se passar por um usuário autorizado. Um **ataque de negação de serviço** é uma classe de ataques em que o invasor impede que o sistema comprometido realize atividades legítimas ou responda ao tráfego legítimo. No entanto, diferentemente do spoofing de IP, o ataque não receberá uma resposta do host visado. Tudo no pacote de dados é autorizado, inclusive o endereço IP no Cabeçalho do pacote. Nos ataques de spoofing de IP, o agente mal-intencionado usa pacotes IP que contêm endereços IP falsos. Os atacantes continuam enviando pacotes IP com endereços IP falsos até que o servidor da rede seja bloqueado.
+
+**Dica profissional:** Lembre-se do princípio da defesa em profundidade. Não há uma estratégia perfeita para impedir cada tipo de ataque. Você pode criar camadas de defesa usando várias Estratégias. Nesse caso, o uso da criptografia padrão do setor fortalecerá sua segurança e o ajudará a se defender de ataques DoS em mais de um nível.
