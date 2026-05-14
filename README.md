@@ -1496,3 +1496,184 @@ Uma maneira importante de se proteger contra um ataque smurf é usar um firewall
 Como você aprendeu, depois que o agente mal-intencionado fareja o Tráfego de rede, ele pode se passar por um usuário autorizado. Um **ataque de negação de serviço** é uma classe de ataques em que o invasor impede que o sistema comprometido realize atividades legítimas ou responda ao tráfego legítimo. No entanto, diferentemente do spoofing de IP, o ataque não receberá uma resposta do host visado. Tudo no pacote de dados é autorizado, inclusive o endereço IP no Cabeçalho do pacote. Nos ataques de spoofing de IP, o agente mal-intencionado usa pacotes IP que contêm endereços IP falsos. Os atacantes continuam enviando pacotes IP com endereços IP falsos até que o servidor da rede seja bloqueado.
 
 **Dica profissional:** Lembre-se do princípio da defesa em profundidade. Não há uma estratégia perfeita para impedir cada tipo de ataque. Você pode criar camadas de defesa usando várias Estratégias. Nesse caso, o uso da criptografia padrão do setor fortalecerá sua segurança e o ajudará a se defender de ataques DoS em mais de um nível.
+
+### Modulo 4:
+
+#### Ataques de força bruta e proteção do sistema operacional
+
+##### Ataques de força bruta
+
+Um ataque de força bruta é um processamento de tentativa e erro para descobrir informações privadas. Há diferentes tipos de ataques de força bruta que os agentes mal-intencionados usam para adivinhar senhas, incluindo:
+
+- Ataques de força bruta simples. Quando os atacantes tentam adivinhar as credenciais de login de um usuário, isso é considerado um ataque de força bruta simples. Eles podem fazer isso inserindo qualquer combinação de nomes de usuário e senhas que possam imaginar até encontrar uma que funcione.
+- Os dictionary attacks usam uma técnica semelhante. Nos dictionary attacks, os atacantes usam uma lista de senhas comumente usadas e credenciais roubadas de violações anteriores para acessar um sistema. Esses ataques são chamados de ataques de "dicionário" porque os atacantes originalmente usavam uma lista de palavras do dicionário para adivinhar as senhas, antes que as regras de senhas complexas se tornassem uma prática de segurança comum.
+
+O uso de força bruta para acessar um sistema pode ser um processo tedioso e demorado, especialmente quando é feito manualmente. Há uma série de ferramentas que os invasores usam para realizar seus ataques. 
+
+##### Avaliação de vulnerabilidades
+
+Antes de ocorrer um ataque de força bruta ou outro incidente de segurança cibernética, as empresas podem executar uma série de testes em sua rede ou aplicativos da Web para avaliar as vulnerabilidades. Os analistas podem usar máquinas virtuais e Sandboxes para testar arquivos suspeitos, verificar vulnerabilidades antes da ocorrência de um evento ou simular um incidente de segurança cibernética.
+
+###### Máquinas virtuais (VMs)
+
+As **máquinas virtuais (VMs)** são versões em software de computadores físicos. As VMs fornecem uma camada adicional de segurança para uma organização porque podem ser usadas para executar códigos em um ambiente isolado, impedindo que códigos maliciosos afetem o restante do computador ou do sistema. As VMs também podem ser excluídas e substituídas por uma imagem original após o teste de malware.
+
+As VMs são úteis na investigação de máquinas potencialmente infectadas ou na execução de malware em um ambiente restrito. O uso de uma VM pode evitar danos ao seu sistema caso as ferramentas sejam usadas de forma inadequada. As VMs também oferecem a possibilidade de reverter para um estado anterior. No entanto, ainda há alguns Riscos envolvidos com as VMs. Ainda há um pequeno risco de que um programa mal-intencionado possa escapar da virtualização e acessar a máquina virtual.
+
+É possível testar e explorar aplicativos facilmente com as VMs, e é fácil alternar entre diferentes VMs em seu computador. Isso também pode ajudar a simplificar muitas tarefas de segurança.
+
+###### Ambientes Sandbox
+
+Um sandbox é um tipo de ambiente de teste que permite a execução de software ou programas separados da sua rede. Elas são comumente usadas para testar patches, identificar e resolver Erros ou detectar vulnerabilidades de segurança cibernética. As Sandboxes também podem ser usadas para avaliar softwares suspeitos, avaliar arquivos com códigos maliciosos e simular cenários de ataque.
+
+As sandboxes podem ser computadores físicos autônomos que não estão conectados a uma rede; no entanto, muitas vezes é mais demorado e econômico usar software ou máquinas virtuais baseadas em nuvem como ambientes de sandbox. Observe que alguns autores de malware sabem como escrever códigos para detectar se o malware é executado em um ambiente de VM ou sandbox. Os atacantes podem programar seu malware para se comportar como um software inofensivo quando executado dentro desses tipos de ambientes de teste. 
+
+##### Medidas de prevenção
+
+Algumas medidas comuns que as organizações usam para evitar a ocorrência de ataques de força bruta e ataques semelhantes incluem:
+
+- Salting e hashing: o hashing converte informações em um valor Único que pode ser usado para determinar sua integridade. É uma função unidirecional, o que significa que é impossível descriptografar e obter o texto original. A salga adiciona caracteres aleatórios às senhas com hash. Isso aumenta o comprimento e a complexidade dos valores de hash, tornando-os mais seguros.
+- Autenticação multifator (MFA) e autenticação de dois fatores (2FA): A MFA é uma medida de segurança que exige que o usuário verifique sua identidade de duas ou mais maneiras para acessar um sistema ou uma rede. Essa verificação ocorre usando uma combinação de fatores de autenticação: nome de usuário e senha, impressões digitais, reconhecimento facial ou uma senha única (OTP) enviada para um número de telefone ou e-mail. a 2FA é semelhante à MFA, exceto pelo fato de usar apenas duas formas de verificação.
+- CAPTCHAe reCAPTCHA: CAPTCHA significa Completely Automated Public Turing test to tell Computers and Humans Apart (teste de Turing público totalmente automatizado para diferenciar computadores e humanos). Ele solicita que os usuários concluam um teste simples que prova que eles são humanos. O reCAPTCHA é um serviço CAPTCHA gratuito do Google que ajuda a proteger os sites contra bots e softwares mal-intencionados.
+- Políticas de senha: As organizações usam políticas de senha para padronizar boas práticas de senha em toda a empresa. As políticas podem incluir diretrizes sobre a complexidade de uma senha, a frequência com que os usuários precisam atualizar as senhas, se as senhas podem ser reutilizadas ou não e se há limites para o número de vezes que um usuário pode tentar fazer o registro antes que sua conta seja suspensa.
+
+#### Aplicativos de segurança de rede
+
+Esta seção do curso aborda o tópico de hardening e monitoramento de rede. Cada dispositivo, ferramenta ou estratégia de segurança implementada pelos analistas de segurança protege ainda mais - ou hardening - a rede até que o proprietário da rede esteja satisfeito com o nível de segurança. Essa abordagem de adicionar camadas de segurança a uma rede é chamada de defesa em profundidade.
+
+Nesta leitura, você aprenderá sobre a função de quatro dispositivos usados para proteger uma rede: firewalls, sistemas de detecção de intrusão, sistemas de prevenção de intrusão e ferramentas de gerenciamento de eventos e informações de segurança. Os profissionais de segurança de rede têm a opção de usar qualquer um ou todos esses dispositivos e ferramentas, dependendo do nível de segurança que desejam alcançar. 
+
+Esta leitura discutirá os benefícios da segurança em camadas. Cada ferramenta mencionada é uma camada adicional de defesa que pode incrementar o hardening de uma rede, começando com o nível mínimo de segurança (fornecido apenas por um firewall) até o nível mais alto de segurança (fornecido pela combinação de um firewall, um dispositivo de detecção e prevenção de intrusões e monitoramento de eventos de segurança). 
+
+![Uma imagem que mostra as diferenças entre um firewall, IPS e IDS.](./public/img/CS_R-055_Firewall-IDS-and-IPS.png)
+
+Observe onde cada ferramenta está localizada na rede. Cada ferramenta tem seu próprio lugar na arquitetura da rede. Os analistas de segurança devem compreender as topologias de rede mostradas nos diagramas ao longo desta leitura.
+
+##### Firewall
+
+Até agora, neste curso, você aprendeu sobre firewalls sem estado, firewalls com estado e firewalls de próxima geração (NGFWs) e as vantagens de segurança de cada um deles.
+
+A maioria dos firewalls é semelhante em suas funções básicas. Os firewalls permitem ou bloqueiam o tráfego com base em um conjunto de regras. À medida que os pacotes de dados entram em uma rede, o cabeçalho do pacote é inspecionado e permitido ou negado com base em seu número de porta. Os NGFWs também são capazes de inspecionar as cargas úteis dos pacotes. Cada sistema deve ter seu próprio firewall, independentemente do firewall da rede.
+
+![Um firewall circulado por traços, protegendo a rede interna do tráfego da Internet que entra pelo modo.](./public/img/CS_R-055_Firewall.png)
+
+##### Sistema de detecção de intrusão (IDS) 
+
+Um **Sistema de detecção de intrusão (IDS)** é um aplicativo que monitora a atividade do sistema e alerta sobre possíveis intrusões. Um IDS alerta os administradores com base na assinatura do tráfego malicioso.
+
+O IDS é configurado para detectar ataques conhecidos. Os sistemas IDS geralmente detectam pacotes de dados à medida que eles se deslocam pela rede e os analisam quanto às características de ataques conhecidos. Alguns sistemas IDS analisam não apenas as assinaturas de ataques conhecidos, mas também as anomalias que podem ser um sinal de atividade mal-intencionada. Quando o IDS descobre uma anomalia, ele envia um alerta ao administrador da rede, que pode investigar mais a fundo.
+
+As limitações dos sistemas IDS são que eles só podem fazer a varredura de ataques conhecidos ou de anomalias óbvias. Ataques novos e sofisticados podem não ser detectados. A outra limitação é que o IDS não interrompe de fato o tráfego de entrada se detectar algo errado. Cabe ao administrador da rede detectar a atividade mal-intencionada antes que ela cause algum dano à rede.
+
+![Um IDS circulado acima de uma imagem de uma troca de rede, que fica entre um firewall e a rede.](./public/img/CS_R-055_IDS.png)
+
+Quando combinado com um firewall, um IDS acrescenta outra camada de defesa. O IDS é colocado atrás do firewall e antes de entrar na LAN, o que permite que o IDS analise os fluxos de dados depois que o tráfego de rede não permitido pelo firewall tiver sido filtrado. Isso é feito para reduzir o ruído nos alertas do IDS, também chamados de falsos positivos.
+
+##### Sistema de prevenção de intrusão (IPS)
+
+Um sistema de prevenção de intrusão (IPS) é um aplicativo que monitora a atividade do sistema em busca de atividades intrusivas e toma medidas para interromper a atividade. Ele oferece ainda mais proteção do que um IDS porque interrompe ativamente as anomalias quando elas são detectadas, ao contrário do IDS que simplesmente relata a anomalia a um administrador de rede.
+
+Um IPS procura assinaturas de ataques conhecidos e anomalias de dados. Um IPS informa a anomalia aos analistas de segurança e bloqueia um remetente específico ou descarta pacotes de rede que pareçam suspeitos.
+
+![Um IPS está situado entre um firewall e a rede interna.](./public/img/CS_R-055_IPS.png)
+
+O IPS (como um IDS) fica atrás do firewall na arquitetura de rede. Isso oferece um alto nível de segurança porque os fluxos de dados arriscados são interrompidos antes mesmo de chegarem às partes sensíveis da rede. No entanto, uma possível limitação é o fato de ele estar em linha: Se ele quebrar, a conexão entre a rede privada e a Internet será interrompida. Outra limitação do IPS é a possibilidade de Falso positivo, que pode resultar na perda de tráfego legítimo.
+
+##### Dispositivos de captura total de pacotes
+
+Os dispositivos de captura total de pacotes podem ser incrivelmente úteis para administradores de rede e profissionais de segurança. Esses dispositivos permitem registrar e analisar todos os dados que são transmitidos pela rede. Eles também ajudam na investigação de alertas criados por um IDS. 
+
+##### Gerenciamento de eventos e informações de segurança 
+
+Um **sistema de gerenciamento de eventos e informações de segurança (SIEM)** é um aplicativo que coleta e analisa dados de registro para monitorar atividades críticas em uma organização. As ferramentas SIEM funcionam em tempo real para relatar atividades suspeitas em um painel de controle centralizado. Além disso, as ferramentas SIEM analisam os dados de registro de rede provenientes de IDSs, IPSs, firewalls, VPNs, proxies e registros DNS. As ferramentas SIEM são uma forma de agregar dados de eventos de segurança para que todos apareçam em um único local para análise dos analistas de segurança. Isso é chamado de painel único de controle. 
+
+Abaixo, você pode ver um exemplo de um painel da ferramenta SIEM do Google Cloud, o Chronicle. **O Chronicle** é uma ferramenta nativa da nuvem projetada para reter, analisar e pesquisar dados.
+
+![Imagem do painel de controle do Chronicle](./public/img/CS_R-055_Chronicle.png)
+
+O **Splunk** é outra ferramenta SIEM comum. A Splunk oferece diferentes opções de ferramentas SIEM: Splunk Enterprise e Splunk Cloud. Ambas as opções incluem painéis detalhados que ajudam os profissionais de segurança a revisar e analisar os dados de uma organização. Há também outras ferramentas SIEM semelhantes disponíveis, e é importante que os profissionais de segurança pesquisem as diferentes ferramentas para determinar qual delas é mais benéfica para a organização.
+
+Uma ferramenta SIEM não substitui a experiência dos analistas de segurança nem as atividades de hardening de rede e sistema abordadas neste curso, mas é usada em combinação com outros métodos de segurança. Os analistas de segurança geralmente trabalham em um Centro de operações de segurança (SOC), onde podem monitorar a atividade na rede. Em seguida, eles podem usar seus conhecimentos e experiência para determinar como responder às informações do painel e decidir quando os eventos atendem aos critérios para serem escalados para a supervisão.
+
+#### Segurança na nuvem
+
+##### Considerações sobre a segurança na nuvem
+
+Muitas organizações optam por usar serviços em nuvem devido à facilidade de implantação, à velocidade de implantação, às Economias de custo e à escalabilidade dessas opções. A computação em nuvem apresenta desafios de segurança exclusivos dos quais os analistas de segurança cibernética precisam estar cientes.
+
+###### Gerenciamento de acesso à identidade
+
+O **Gerenciamento de identidade e acesso (IAM)** é um conjunto de processos e tecnologias que ajuda as organizações a gerenciar identidades digitais em seu ambiente. Esse serviço também autoriza como os usuários podem usar diferentes recursos da nuvem. Um problema comum que as organizações enfrentam ao usar a nuvem é a configuração inadequada das funções de usuário na nuvem. Uma função de usuário configurada incorretamente aumenta o risco ao permitir que usuários não autorizados tenham acesso a operações críticas na nuvem.
+
+###### Configuração
+
+O ecossistema de nuvem em expansão introduz uma complexidade significativa no gerenciamento da rede. Cada serviço em nuvem precisa de uma configuração precisa para manter os padrões de segurança e conformidade. Esse desafio se intensifica durante as migrações para a nuvem, em que é fundamental garantir uma configuração precisa para cada processo migrado. A negligência nessa área pode expor a rede a vulnerabilidades. Os serviços em nuvem mal configurados são uma fonte frequente de violações de segurança, o que ressalta a importância da atenção meticulosa aos detalhes por parte dos administradores e arquitetos de rede durante a migração e o gerenciamento contínuo dos serviços em nuvem.
+
+###### Superfície de ataque
+
+Os provedores de serviços de nuvem (CSPs) oferecem vários aplicativos e serviços para as organizações a um baixo custo.
+
+Cada serviço ou aplicativo em uma rede tem seu próprio conjunto de riscos e vulnerabilidades e aumenta a superfície geral de ataque de uma organização. Uma superfície de ataque maior deve ser compensada com medidas de segurança maiores.
+
+As redes em nuvem que utilizam muitos serviços introduzem muitos pontos de entrada na rede de uma organização. No entanto, se a rede for projetada corretamente, a utilização de vários serviços não introduzirá mais pontos de entrada no projeto de rede de uma organização. Esses pontos de entrada podem ser usados para introduzir malware na rede e apresentar outras vulnerabilidades de segurança. É importante observar que os CSPs costumam recorrer a opções mais seguras e foram submetidos a um exame mais minucioso do que uma rede tradicional no local.
+
+###### Ataques de dia zero
+
+Os ataques de dia zero são uma importante consideração de segurança para as organizações que usam soluções de rede na nuvem ou tradicionais no local. Um ataque de dia zero é uma exploração que era desconhecida anteriormente. É mais provável que os CSPs saibam da ocorrência de um ataque de dia zero antes que uma organização de TI tradicional saiba. Os CSPs têm maneiras de corrigir hipervisores e migrar cargas de trabalho para outras máquinas virtuais. Esses métodos garantem que os clientes não sejam afetados pelo ataque. Há também várias ferramentas disponíveis para aplicação de patches no nível do sistema operacional que as organizações podem usar.
+
+###### Visibilidade e rastreamento
+
+Os administradores de rede têm acesso a todos os pacotes de dados que cruzam a rede, tanto nas redes locais quanto na nuvem. Eles podem farejar e inspecionar pacotes de dados para saber mais sobre o desempenho da rede ou para verificar possíveis ameaças e ataques.
+
+Esse tipo de visibilidade também é oferecido na nuvem por meio de registros de fluxo e ferramentas, como o espelhamento de pacotes. Os CSPs assumem a responsabilidade pela segurança na nuvem, mas não permitem que as organizações que usam sua infraestrutura monitorem o tráfego nos servidores do CSP. Muitos CSPs oferecem medidas de segurança robustas para proteger sua infraestrutura. Ainda assim, essa situação pode ser uma preocupação para as organizações que estão acostumadas a ter acesso total à sua rede e às suas operações. Os CSPs pagam por auditorias de terceiros para verificar o grau de segurança de uma rede em nuvem e identificar possíveis vulnerabilidades. As auditorias podem ajudar as organizações a identificar se alguma vulnerabilidade tem origem na infraestrutura local e se há algum lapso de conformidade por parte do CSP. 
+
+###### As coisas mudam rapidamente na nuvem
+
+Os CSPs são grandes organizações que trabalham arduamente para se manterem atualizados com os avanços tecnológicos. Para as organizações que estão acostumadas a ter o controle de todos os ajustes feitos em sua rede, isso pode ser um desafio potencial a ser acompanhado. As atualizações dos serviços na nuvem podem afetar as considerações de segurança das organizações que os utilizam. Por exemplo, as configurações de conexão talvez precisem ser alteradas com base nas atualizações do CSP.
+
+As organizações que usam CSPs geralmente precisam atualizar seus processos de TI. É possível que as organizações continuem seguindo as práticas recomendadas estabelecidas para mudanças, configurações e outras considerações de segurança. No entanto, talvez seja necessário que a organização adote uma abordagem diferente, de modo a se alinhar às alterações feitas pelo CSP.
+
+A rede em nuvem oferece várias opções que podem parecer atraentes para uma empresa de pequeno porte - opções que ela nunca poderia construir em suas próprias instalações. No entanto, é importante considerar que cada serviço acrescenta complexidade ao perfil de segurança da organização, e ela precisará de uma equipe de segurança para monitorar todos os serviços na nuvem.
+
+##### Modelo de responsabilidade compartilhada
+
+Um princípio de Segurança na nuvem comumente aceito é o **modelo de responsabilidade compartilhada**. O modelo de responsabilidade compartilhada afirma que o CSP deve assumir a responsabilidade pela segurança que envolve a infraestrutura de nuvem, inclusive centros de dados físicos, hipervisores e sistemas operacionais de host. A empresa que usa o serviço de nuvem é responsável pelos ativos e processos que armazena ou opera na nuvem.
+
+O modelo de responsabilidade compartilhada garante que tanto o CSP quanto os usuários concordem sobre onde começa e termina a responsabilidade pela segurança. Um problema ocorre quando as organizações presumem que o CSP está cuidando da segurança pela qual elas não se responsabilizaram. Um exemplo disso são os aplicativos e as configurações de nuvem. O CSP assume a responsabilidade de proteger a nuvem, mas é responsabilidade da organização garantir que os serviços sejam configurados adequadamente de acordo com os requisitos de segurança da organização.
+
+#### Criptografia e segurança na nuvem
+
+##### Fortalecimento da segurança na nuvem
+
+Há várias técnicas e ferramentas que podem ser usadas para proteger a infraestrutura e os recursos da rede de nuvem. Algumas técnicas comuns de reforço da segurança na nuvem incluem a incorporação de IAM, hipervisores, Linha de base, criptografia e apagamento criptográfico.
+
+###### Gerenciamento de acesso à identidade (IAM)
+
+O **Gerenciamento de identidade e acesso (IAM)** é um conjunto de processos e tecnologias que ajuda as organizações a gerenciar identidades digitais em seu ambiente. Esse serviço também autoriza como os usuários podem aproveitar os diferentes recursos da Nuvem.
+
+###### Hipervisores
+
+Um hipervisor faz a abstração entre o hardware do host e o ambiente do software operacional. Há dois tipos de hipervisores. Os hipervisores do tipo um são executados no hardware do computador host. Um exemplo de hipervisor do tipo um é o ESXi da VMware®. Os hipervisores do tipo dois operam no software do computador host. Um exemplo de hipervisor do tipo dois é o VirtualBox. Os provedores de serviços em Nuvem (CSPs) geralmente usam hipervisores do tipo um. Os CSPs são responsáveis pelo Gerenciamento do hipervisor e de outros componentes de virtualização. O CSP garante que os recursos e os ambientes de Nuvem estejam disponíveis e fornece patches e atualizações regulares. Vulnerabilidades em hipervisores ou configurações incorretas podem levar a fugas de máquinas virtuais (VM escapes). Uma fuga de VM é um exploit em que um agente mal-intencionado obtém acesso ao hipervisor principal, potencialmente ao computador host e a outras VMs. Como cliente de um CSP, você raramente lidará com hipervisores diretamente.
+
+###### Linha de base
+
+A Linha de base para redes de computadores e operações em nuvem abrange como o ambiente de nuvem é configurado e definido. Uma Linha de base é um ponto de referência fixo. Esse ponto de referência pode ser usado para comparar as mudanças feitas em um ambiente de nuvem. A configuração e a instalação adequadas podem melhorar muito a segurança e o desempenho de um ambiente de nuvem. Exemplos de estabelecimento de uma Linha de Base em um ambiente de nuvem incluem: restringir o acesso ao portal de administração do ambiente de nuvem, habilitar o gerenciamento de senhas, habilitar a criptografia de arquivos e habilitar serviços de detecção de ameaças para bancos de dados SQL.
+
+##### Criptografia na Nuvem
+
+A criptografia pode ser aplicada para proteger os dados que são processados e armazenados em um ambiente de nuvem. A criptografia usa criptografia e sistemas seguros de gerenciamento de chaves para fornecer integridade e confidencialidade dos dados. A criptografia de dados é uma das principais maneiras de proteger dados e informações confidenciais na nuvem.
+
+A criptografia é o processamento de informações embaralhadas em Texto criptografado, que não pode ser lido por ninguém sem a chave de criptografia. A criptografia se originou principalmente da codificação manual de mensagens e informações usando um algoritmo para converter qualquer letra ou número em um novo valor. A criptografia moderna se baseia no sigilo de uma chave, em vez do sigilo de um algoritmo. A criptografia é uma ferramenta importante que ajuda a proteger as redes de nuvem e os dados em repouso para evitar o acesso não autorizado. Você aprenderá mais sobre criptografia em detalhes em um próximo curso.
+
+##### Eliminação criptográfica
+
+A eliminação criptográfica é um método de apagar a chave de criptografia dos dados criptografados. Ao destruir dados na Nuvem, os métodos mais tradicionais de destruição de dados não são tão eficazes. A destruição criptográfica é uma técnica mais recente em que as chaves criptográficas usadas para a descriptografia dos dados são destruídas. Isso torna os dados indecifráveis e impede que qualquer pessoa os descriptografe. Ao fazer a criptografia, todas as cópias da chave precisam ser destruídas para que ninguém tenha a oportunidade de acessar os dados no futuro.
+
+##### Gerenciamento de chaves
+
+A criptografia moderna depende de manter as chaves de criptografia seguras. Veja abaixo as medidas que podem ser tomadas para proteger ainda mais seus dados ao usar aplicativos em Nuvem:
+
+- Módulo de plataforma confiável (TPM). O TPM é um chip de computador que pode armazenar com segurança senhas, certificados e chaves de criptografia.
+- Módulo de segurança de hardware na nuvem (CloudHSM). O CloudHSM é um dispositivo de computador que fornece armazenamento seguro para chaves criptográficas e processa operações criptográficas, como criptografia e descriptografia.
+
+As organizações e os clientes não têm acesso direto ao provedor de serviços em nuvem (CSP), mas podem solicitar auditorias e relatórios de segurança entrando em contato com o CSP. Normalmente, os clientes não têm acesso às chaves de criptografia específicas que os CSPs usam para criptografar os dados dos clientes. No entanto, quase todos os CSPs permitem que os clientes forneçam suas próprias chaves de criptografia, dependendo do serviço que o cliente está acessando. Por sua vez, o cliente é responsável por suas chaves de criptografia e por garantir que as chaves permaneçam confidenciais. O CSP está limitado em como pode ajudar o cliente se as chaves do cliente forem comprometidas ou destruídas. Uma das principais vantagens do modelo de responsabilidade compartilhada é que o cliente não é totalmente responsável pela manutenção da infraestrutura criptográfica. As organizações podem avaliar e monitorar o risco envolvido ao permitir que o CSP gerencie a infraestrutura, analisando a auditoria e os controles de segurança do CSP. Para os contratados federais, o FEDRAMP fornece uma lista de CSPs verificados.
