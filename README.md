@@ -1677,3 +1677,148 @@ A criptografia moderna depende de manter as chaves de criptografia seguras. Veja
 - Módulo de segurança de hardware na nuvem (CloudHSM). O CloudHSM é um dispositivo de computador que fornece armazenamento seguro para chaves criptográficas e processa operações criptográficas, como criptografia e descriptografia.
 
 As organizações e os clientes não têm acesso direto ao provedor de serviços em nuvem (CSP), mas podem solicitar auditorias e relatórios de segurança entrando em contato com o CSP. Normalmente, os clientes não têm acesso às chaves de criptografia específicas que os CSPs usam para criptografar os dados dos clientes. No entanto, quase todos os CSPs permitem que os clientes forneçam suas próprias chaves de criptografia, dependendo do serviço que o cliente está acessando. Por sua vez, o cliente é responsável por suas chaves de criptografia e por garantir que as chaves permaneçam confidenciais. O CSP está limitado em como pode ajudar o cliente se as chaves do cliente forem comprometidas ou destruídas. Uma das principais vantagens do modelo de responsabilidade compartilhada é que o cliente não é totalmente responsável pela manutenção da infraestrutura criptográfica. As organizações podem avaliar e monitorar o risco envolvido ao permitir que o CSP gerencie a infraestrutura, analisando a auditoria e os controles de segurança do CSP. Para os contratados federais, o FEDRAMP fornece uma lista de CSPs verificados.
+
+## Ferramentas de trabalho: Linux e SQL
+
+### Modulo 1:
+
+#### Compare os sistemas operacionais
+
+##### Sistemas operacionais comuns
+
+É útil conhecer os seguintes sistemas operacionais no setor de segurança: Windows, macOS®, Linux, ChromeOS, Android e iOS.
+
+###### Windows e macOS
+
+O Windows e o macOS são sistemas operacionais comuns. O sistema operacional Windows foi lançado em 1985, e o macOS foi lançado em 1984. Ambos os sistemas operacionais são usados em computadores pessoais e corporativos.
+
+O Windows é um software operacional de código fechado, o que significa que o código fonte não é compartilhado livremente com o público. O macOS é parcialmente de código aberto. Ele tem alguns componentes de código aberto, como o kernel do macOS. O macOS também tem alguns componentes de software proprietário.
+
+###### Linux
+
+A primeira versão do Linux foi lançada em 1991, e outras versões importantes foram lançadas no início da década de 1990. O Linux é um sistema operacional totalmente de código aberto, o que significa que qualquer pessoa pode acessar o Linux e seu código-fonte. A natureza de código aberto do Linux permite que os desenvolvedores da comunidade Linux colaborem entre si.
+
+O Linux é particularmente importante para o setor de segurança. Há algumas distribuições que foram projetadas especificamente para a segurança. Mais adiante neste curso, você aprenderá sobre o Linux e sua importância para o setor de segurança.
+
+###### ChromeOS
+
+O ChromeOS foi lançado em 2011. Ele é parcialmente de código aberto e é derivado do Chromium OS, que é totalmente de código aberto. O ChromeOS é frequentemente usado no Campo da educação.
+
+###### Android e iOS
+
+O Android e o iOS são sistemas operacionais móveis. Diferentemente dos outros sistemas operacionais mencionados, os sistemas operacionais móveis são normalmente usados em dispositivos móveis, como telefones, tablets e relógios. O Android foi introduzido para uso público em 2008, e o iOS foi introduzido em 2007. O Android é de código aberto, e o iOS é parcialmente de código aberto.
+
+##### Sistemas operacionais e vulnerabilidades
+
+Problemas de segurança são inevitáveis em todos os sistemas operacionais. Uma parte importante da proteção de um sistema operacional é manter o sistema e todos os seus componentes atualizados.
+
+###### Sistemas operacionais legados
+
+Um sistema operacional legado é um sistema operacional desatualizado, mas que ainda está sendo usado. Algumas organizações continuam a usar sistemas operacionais legados porque o software do qual dependem não é compatível com os sistemas operacionais mais recentes. Isso pode ser mais comum em setores que usam muitos equipamentos que requerem software incorporado - software que é colocado dentro de componentes do equipamento.
+
+Os sistemas operacionais legados podem ser vulneráveis a problemas de segurança porque não são mais suportados ou atualizados. Isso significa que os sistemas operacionais legados podem ser vulneráveis a novas ameaças.
+Outras vulnerabilidades
+
+Mesmo quando os sistemas operacionais são mantidos atualizados, eles ainda podem se tornar vulneráveis a ataques. Abaixo estão vários recursos que incluem informações sobre sistemas operacionais e suas vulnerabilidades.
+
+- [Centro de Resposta de Segurança da Microsoft (MSRC)](https://msrc.microsoft.com/update-guide/vulnerability): Lista de vulnerabilidades conhecidas que afetam os produtos e serviços da Microsoft
+- [Atualizações de segurança da Apple](https://support.apple.com/en-us/100100): Lista de atualizações de segurança e informações sobre os sistemas operacionais da Apple®, incluindo macOS e iOS, e outros produtos
+- [Relatório de Vulnerabilidades e Exposições Comuns (CVE) para Ubuntu](https://ubuntu.com/security/cves): Uma lista de vulnerabilidades conhecidas que afetam o Ubuntu, que é uma distribuição específica do Linux
+- [Boletim de Segurança na Nuvem do Google](https://cloud.google.com/support/bulletins): Uma lista de vulnerabilidades conhecidas que afetam os produtos e serviços do Google Nuvem
+
+Manter um sistema operacional atualizado é uma maneira chave de ajudar o sistema a permanecer seguro. Como pode ser difícil manter todos os sistemas atualizados o tempo todo, é importante que os analistas de segurança conheçam os sistemas operacionais legados e os riscos que eles podem criar.
+
+#### Solicitações ao sistema operacional
+
+##### Inicializando o computador
+
+Quando você inicializa ou liga o computador, um microchip BIOS ou UEFI é ativado. O **Basic Input/Output System (BIOS)** é um microchip que contém instruções de carga para o computador e é predominante em sistemas mais antigos. A **UEFI (Unified Extensible Firmware Interface)** é um microchip que contém instruções de carga para o computador e substitui o BIOS em sistemas mais modernos.
+
+Os chips BIOS e UEFI executam a mesma função para inicializar o computador. O BIOS era o chip padrão até 2007, quando os chips UEFI começaram a ser mais usados. Atualmente, a maioria dos computadores novos inclui um chip UEFI. A UEFI oferece recursos de segurança aprimorados.
+
+Os microchips BIOS ou UEFI contêm uma variedade de instruções de carga para o computador seguir. Por exemplo, uma das instruções de carga é verificar a integridade do hardware do computador.
+
+A última instrução do BIOS ou da UEFI ativa o carregador de inicialização. O **carregador de inicialização** é um software que inicializa o sistema operacional. Após a inicialização do sistema operacional, o computador estará pronto para uso.
+
+##### Integridade de uma tarefa
+
+AS discutido anteriormente, os sistemas operacionais nos ajudam a usar os computadores com mais eficiência. Depois que o computador tiver passado pelo processo de inicialização, a conclusão de uma tarefa em um computador é um processo de quatro partes.
+
+[Mostra um processo que passa do usuário para o aplicativo, para os sistemas operacionais e, finalmente, para o hardware.](./public/img/CS_R-060_User-Application-Operating-System-Hardware.png)
+
+###### Usuário
+
+A primeira parte do processamento é o usuário. O usuário inicia o processamento quando tem algo que deseja realizar no computador. Neste momento, você é um usuário! Você iniciou o processo de acesso a esta leitura.
+
+###### Aplicativo
+
+O aplicativo é o software com o qual os usuários interagem para concluir uma tarefa. Por exemplo, se quiser calcular algo, você usaria o aplicativo da calculadora. Se quiser escrever um relatório, usará um aplicativo de processamento de texto. Essa é a segunda parte do processamento.
+
+###### Sistema operacional
+
+O sistema operacional recebe a solicitação do usuário do aplicativo. O trabalho do sistema operacional é interpretar a solicitação e direcionar seu Fluxo. Para concluir a tarefa, o sistema operacional a envia para os componentes aplicáveis do hardware.
+
+###### Hardware
+
+O hardware é onde todo o processamento é feito para concluir as tarefas iniciadas pelo usuário. Por exemplo, quando um usuário deseja calcular um número, a CPU calcula a resposta. Como outro exemplo, quando um usuário deseja salvar um arquivo, outro componente do hardware, o disco rígido, processa essa tarefa.
+
+Depois que o hardware faz o trabalho, ele envia a saída de volta ao aplicativo por meio do sistema operacional para que ele possa exibir os resultados para o usuário.
+
+##### O sistema operacional em ação nos bastidores
+
+Considere mais uma vez como um computador é semelhante a um carro. Há processos que não podem ser observados diretamente ao operar um carro, mas eles o sentem avançar quando pressionam o pedal do acelerador. O mesmo acontece com um computador. Dentro de um computador, ocorre um trabalho importante que não é observado diretamente. Esse trabalho envolve o sistema operacional.
+
+Você pode explorar isso por meio de outra analogia. O processamento do uso de um sistema operacional também é semelhante a fazer um pedido em um restaurante. Em um restaurante, você faz um pedido e recebe a comida, mas não vê o que está acontecendo na cozinha quando os cozinheiros preparam a comida.
+
+Pedir comida é semelhante a usar um aplicativo em um computador. Ao fazer o pedido, você faz uma solicitação específica, como "uma sopa pequena, bem quente" Ao usar um aplicativo, você também faz solicitações específicas, como "imprimir três cópias frente e verso deste documento".
+
+Você pode comparar a comida que recebe com o que acontece quando o hardware envia a saída. Você recebe a comida que pediu. Você recebe o documento que deseja imprimir.
+
+Por fim, a cozinha é como o sistema operacional. Você não sabe o que acontece na cozinha, mas ela é fundamental para interpretar a solicitação e garantir que você receba o que pediu. Da mesma forma, embora o trabalho do sistema operacional não seja diretamente transparente para você, ele é essencial para a conclusão de suas tarefas.
+
+##### Um exemplo: Download de um arquivo de um navegador da Internet
+
+Anteriormente, você explorou como os sistemas operacionais, os aplicativos e o hardware trabalham juntos, examinando uma tarefa que envolve um cálculo. Você pode expandir essa compreensão explorando como o sistema operacional conclui outra tarefa, o download de um arquivo de um navegador da Internet:
+
+- Primeiro, o usuário decide que deseja fazer o download de um arquivo que encontrou on-line, então ele clica em um botão de download próximo ao arquivo no aplicativo do navegador da Internet.
+- Em seguida, o navegador da Internet comunica essa ação ao sistema operacional.
+- O sistema operacional envia a solicitação de download do arquivo para o hardware apropriado para processamento.
+- O hardware começa a fazer o download do arquivo e o sistema operacional envia essas informações para o aplicativo do navegador da Internet. Em seguida, o navegador da Internet informa ao usuário quando o arquivo foi baixado.
+
+#### Tecnologia de virtualização
+
+##### O que é uma máquina virtual?
+
+Uma **máquina virtual (VM)** é uma versão virtual de um computador físico. As máquinas virtuais são um exemplo de virtualização. A virtualização é o processamento do uso de software para criar representações virtuais de várias máquinas físicas. O termo "virtual" refere-se a máquinas que não existem fisicamente, mas que operam como se existissem porque seu software simula o hardware físico. Os sistemas virtuais não usam hardware físico dedicado. Em vez disso, eles usam versões definidas por software do hardware físico. Isso significa que uma única máquina virtual tem uma CPU virtual, um armazenamento virtual e outro hardware virtual. Os sistemas virtuais são apenas códigos.
+
+[Um computador cinza escuro com setas para computadores cinza claro que têm "VM" na tela e são cercados por linhas pontilhadas.](./public/img/VMs_image.jpeg)
+
+É possível executar várias máquinas virtuais usando o hardware físico de um único computador. Isso envolve a divisão dos recursos do computador host para serem compartilhados entre todos os componentes físicos e virtuais. Por exemplo, a **RAM (Random Access Memory, memória de acesso aleatório)** é um componente de hardware usado para memória de curto prazo. Se um computador tiver 16 GB de RAM, ele poderá hospedar três máquinas virtuais, de modo que o computador físico e as máquinas virtuais tenham 4 GB de RAM cada. Além disso, cada uma dessas máquinas virtuais teria seu próprio sistema operacional e funcionaria de forma semelhante a um computador comum.
+
+##### Benefícios das máquinas virtuais
+
+Os profissionais de segurança geralmente usam a virtualização e as máquinas virtuais. A virtualização pode aumentar a segurança de muitas tarefas e também pode aumentar a eficiência.
+
+###### Segurança
+
+Um dos benefícios é que a virtualização pode fornecer um ambiente isolado, ou um Sandbox, na máquina hospedeira física. Quando um computador tem várias máquinas virtuais, essas máquinas virtuais são "convidadas" do computador. Especificamente, elas são isoladas do computador host e de outras máquinas virtuais convidadas. Isso proporciona uma camada de segurança, pois as máquinas virtuais podem ser mantidas separadas dos outros sistemas. Por exemplo, se uma máquina virtual individual for infectada por malware, ela poderá ser tratada com mais segurança porque está isolada das outras máquinas. Um profissional de segurança também pode colocar intencionalmente um malware em uma máquina virtual para examiná-lo em um ambiente mais seguro.
+
+Observação: embora o uso de máquinas virtuais seja útil na investigação de máquinas potencialmente infectadas ou na execução de malware em um ambiente restrito, ainda há alguns riscos. Por exemplo, um programa mal-intencionado pode escapar da virtualização e acessar a máquina host. É por isso que você nunca deve confiar totalmente nos sistemas de virtualização.
+
+###### Eficiência
+
+O uso de máquinas virtuais também pode ser uma maneira eficiente e conveniente de realizar tarefas de segurança. Você pode abrir várias máquinas virtuais de uma só vez e alternar facilmente entre elas. Isso lhe permite simplificar as tarefas de segurança, como testar e explorar vários aplicativos.
+
+É possível comparar a eficiência de uma máquina virtual com a de um ônibus urbano. Um único ônibus urbano tem muito espaço e é uma forma eficiente de transportar muitas pessoas simultaneamente. Se os ônibus urbanos não existissem, todos no ônibus teriam que dirigir seus próprios carros. Isso usa mais gasolina, carros e outros recursos do que andar de ônibus urbano.
+
+Da mesma forma que muitas pessoas podem andar em um único ônibus, muitas máquinas virtuais podem ser hospedadas na mesma máquina física. Dessa forma, não são necessárias máquinas físicas separadas para executar determinadas tarefas.
+
+##### Gerenciamento de máquinas virtuais
+
+As máquinas virtuais podem ser gerenciadas com um software chamado **hipervisor**. Os hipervisores ajudam os usuários a gerenciar várias máquinas virtuais e a conectar o hardware virtual e o físico. Os hipervisores também ajudam a alocar os recursos compartilhados da máquina hospedeira física para uma ou mais máquinas virtuais.
+
+Um hipervisor que é útil para você conhecer é a **máquina virtual baseada em kernel (KVM)**. O KVM é um hipervisor de código aberto compatível com a maioria das principais distribuições do Linux. Ele é incorporado ao kernel do Linux, o que significa que pode ser usado para criar máquinas virtuais em qualquer máquina que esteja executando um sistema operacional Linux sem a necessidade de software adicional.
+
+##### Outras formas de virtualização
+
+Além das máquinas virtuais, há outras formas de virtualização. Algumas dessas tecnologias de virtualização não usam sistemas operacionais. Por exemplo, vários servidores virtuais podem ser criados a partir de um único servidor físico. Também é possível criar redes virtuais para usar com mais eficiência o hardware de uma rede física.
