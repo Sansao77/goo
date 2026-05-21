@@ -1822,3 +1822,164 @@ Um hipervisor que é útil para você conhecer é a **máquina virtual baseada e
 ##### Outras formas de virtualização
 
 Além das máquinas virtuais, há outras formas de virtualização. Algumas dessas tecnologias de virtualização não usam sistemas operacionais. Por exemplo, vários servidores virtuais podem ser criados a partir de um único servidor físico. Também é possível criar redes virtuais para usar com mais eficiência o hardware de uma rede física.
+
+#### A linha de comando em uso
+
+##### CLI vs. GUI
+
+Uma interface gráfica de usuário (GUI) é uma interface de usuário que usa ícones na tela para gerenciar diferentes tarefas no computador. Uma interface de linha de comando (CLI) é uma interface de usuário baseada em texto que usa comandos para interagir com o computador. 
+
+###### Exibição
+
+Uma diferença notável entre essas duas interfaces é como elas aparecem na tela. Uma GUI tem gráficos e ícones, como os ícones da área de trabalho ou da barra de tarefas para iniciar programas. Em contrapartida, uma CLI tem apenas texto. Seu aspecto é semelhante ao de linhas de código. 
+
+[Comparação lado a lado de uma interface gráfica de usuário com ícones e uma interface de linha de comando com código.](./public/img/GUI_CLI.png)
+
+###### Função
+
+Essas duas interfaces também diferem em sua Função. Uma GUI é uma interface que só permite fazer uma solicitação de cada vez. No entanto, uma CLI permite que você faça várias solicitações ao mesmo tempo.
+
+
+##### Vantagens de uma CLI na segurança cibernética  
+
+A escolha entre usar uma GUI ou uma CLI é parcialmente baseada na preferência pessoal, mas os analistas de segurança devem poder usar ambas as interfaces. O uso de uma CLI pode oferecer algumas vantagens.
+
+###### Eficiência
+
+Alguns preferem a CLI porque ela pode ser usada mais rapidamente quando se sabe como gerenciar essa interface. Para um novo usuário, uma GUI pode ser mais eficiente porque é mais fácil para os iniciantes navegarem. 
+
+Como a CLI pode aceitar várias solicitações ao mesmo tempo, ela é mais poderosa quando você precisa executar várias tarefas com eficiência. Por exemplo, se tivesse que criar vários arquivos novos em seu sistema, poderia realizar essa tarefa rapidamente em uma CLI. Se estivesse usando uma GUI, isso poderia levar muito mais tempo, pois seria necessário repetir as mesmas etapas para cada novo arquivo.
+
+###### Arquivo Histórico
+
+Para os analistas de segurança, usar a CLI do Linux é útil porque ela registra um arquivo de histórico de todos os comandos e ações na CLI. Se estiver usando uma GUI, suas ações não serão necessariamente salvas em um arquivo de histórico.
+
+Por exemplo, você pode estar em uma situação em que está respondendo a um incidente usando um manual. As instruções do playbook exigem que você execute uma série de comandos diferentes. Se você usasse uma CLI, poderia voltar ao histórico e garantir que todos os comandos fossem usados corretamente. Isso poderia ser útil se houvesse problemas ao usar o playbook e você tivesse que revisar as etapas executadas na linha de comando.
+
+Além disso, se suspeitar que um atacante comprometeu seu sistema, você poderá rastrear as ações dele usando o arquivo de histórico.
+
+### Modulo 3: 
+
+#### Explicação da arquitetura do Linux
+
+##### Usuário
+
+O **usuário** é a pessoa que interage com um computador. Ele inicia e gerencia as tarefas do computador. O Linux é um sistema multiusuário, o que significa que vários usuários podem usar os mesmos recursos ao mesmo tempo.
+
+##### Aplicativos
+
+Um **aplicativo** é um programa que executa uma tarefa específica. Há muitos aplicativos diferentes em seu computador. Alguns aplicativos normalmente vêm pré-instalados em seu computador, como calculadoras ou calendários. Outros aplicativos podem ter de ser instalados, como alguns navegadores da Web ou clientes de e-mail. No Linux, você geralmente usa um **gerenciador de pacotes** para instalar aplicativos. Um gerenciador de pacotes é uma ferramenta que ajuda os usuários a instalar, gerenciar e remover pacotes ou aplicativos. Um pacote é um software que pode ser combinado com outros pacotes para formar um aplicativo.
+
+##### Shell
+
+O **shell** é o interpretador de linha de comando. Tudo o que é inserido no shell é baseado em texto. O shell permite que os usuários deem comandos ao kernel e recebam respostas dele. Você pode pensar no shell como um tradutor entre você e o computador. O shell traduz os comandos que você digita para que o computador possa executar as tarefas que você deseja.
+
+##### Padrão de hierarquia do sistema de arquivos (FHS)
+
+O **FHS (Filesystem Hierarchy Standard, padrão de hierarquia do sistema de arquivos)** é o componente do sistema operacional Linux que organiza os dados. Ele especifica o local onde os dados são armazenados no sistema operacional.
+
+Um diretório é um arquivo que organiza onde outros arquivos são armazenados. Às vezes, os diretórios são chamados de "pastas" e podem conter arquivos ou outros diretórios. O FHS define como os diretórios, o conteúdo dos diretórios e outros armazenamentos são organizados para que o sistema operacional saiba onde encontrar dados específicos.
+
+##### Kernel
+
+O **kernel** é o componente do sistema operacional Linux que gerencia os processos e a memória. Ele se comunica com os aplicativos para encaminhar comandos. O kernel do Linux é exclusivo do sistema operacional Linux e é essencial para a alocação de recursos no sistema. O kernel controla todas as principais funções do hardware, o que pode ajudar a agilizar as tarefas com mais eficiência.
+
+##### Hardware
+
+O **hardware** são os componentes físicos de um computador. Talvez você esteja familiarizado com alguns componentes de hardware, como discos rígidos ou CPUs. O hardware é classificado como periférico ou interno.
+
+###### Dispositivos periféricos
+
+Os **dispositivos periféricos** são componentes de hardware que são conectados e controlados pelo sistema do computador. Eles não são componentes principais necessários para executar o sistema do computador. Os dispositivos periféricos podem ser adicionados ou removidos livremente. Exemplos de dispositivos periféricos incluem monitores, impressoras, o teclado e o mouse.
+
+###### Hardware interno
+
+O **hardware interno** é o componente necessário para o funcionamento do computador. O hardware interno inclui uma placa de circuito principal e todos os componentes conectados a ela. Essa placa de circuito principal também é chamada de placa-mãe. O hardware interno inclui o seguinte:
+
+- A CPU (Central Processing Unit, unidade central de processamento) é o processador principal de um computador, usado para executar tarefas gerais de computação em um computador. A CPU executa as instruções fornecidas pelos programas, o que permite que esses programas sejam executados.
+- A RAM (Random Access Memory, memória de acesso aleatório ) é um componente de hardware usado para memória de curto prazo. É nela que os dados são armazenados temporariamente enquanto você executa tarefas no computador. Por exemplo, se estiver escrevendo um relatório no computador, os dados necessários para isso serão armazenados na RAM. Depois de terminar de escrever o relatório e fechar o programa, esses dados são excluídos da RAM. As informações na RAM não podem ser acessadas depois que o computador é desligado. A CPU utiliza os dados da RAM para executar programas.
+- O disco rígido é um componente de hardware usado para memória de longo prazo. É onde os programas e arquivos são armazenados para que o computador possa acessá-los posteriormente. As informações no disco rígido podem ser acessadas mesmo depois de o computador ter sido desligado e ligado novamente. Um computador pode ter vários discos rígidos.
+
+#### Mais distribuições Linux
+
+##### KALI LINUX ™
+
+O KALI LINUX ™ é uma distribuição de código aberto do Linux que é amplamente usada no setor de segurança. Isso ocorre porque o KALI LINUX ™, que é baseado no Debian, é pré-instalado com muitas ferramentas úteis para testes de penetração e forense digital. Um teste de penetração é um ataque simulado que ajuda a identificar vulnerabilidades em sistemas, redes, sites, aplicativos e processos. A perícia digital é a prática de coletar e analisar dados para determinar o que aconteceu após um ataque. Essas são atividades importantes no setor de segurança.
+
+No entanto, o KALI LINUX ™ não é a única distribuição Linux usada na segurança cibernética.
+
+##### Ubuntu
+
+O Ubuntu é uma distribuição de código aberto e fácil de usar que é amplamente utilizada no setor de segurança e em outros setores. Ele tem uma interface de Linha de Comando (CLI) e uma interface gráfica do usuário (GUI). O Ubuntu também é derivado do Debian e inclui aplicativos comuns por padrão. Os usuários também podem baixar muitos outros aplicativos de um gerenciador de pacotes, incluindo ferramentas voltadas para a segurança. Devido ao seu amplo uso, o Ubuntu tem um número especialmente grande de recursos da comunidade para dar suporte aos usuários.
+
+O Ubuntu também é amplamente usado para computação em nuvem. À medida que as organizações migram para servidores em nuvem, o trabalho de segurança cibernética pode envolver mais regularmente derivados do Ubuntu.
+
+##### Parrot
+
+O Parrot é uma distribuição de código aberto que é comumente usada para segurança. Semelhante ao KALI LINUX ™, o Parrot vem com ferramentas pré-instaladas relacionadas a testes de penetração e forense digital. Como o KALI LINUX ™ e o Ubuntu, ele é baseado no Debian.
+
+O Parrot também é considerado uma distribuição Linux fácil de usar. Isso se deve ao fato de ele ter uma GUI que muitos consideram fácil de navegar. Isso se soma ao CLI do Parrot.
+
+##### Red Hat® Enterprise Linux®
+
+O Red Hat Enterprise Linux é uma distribuição do Linux baseada em assinatura, criada para uso corporativo. O Red Hat não é gratuito, o que é uma grande diferença em relação às distribuições mencionadas anteriormente. Como foi criado e tem suporte para uso corporativo, a Red Hat também oferece uma equipe de suporte dedicada para que os clientes entrem em contato para resolver problemas.
+
+##### AlmaLinux
+
+O AlmaLinux é uma distribuição Linux voltada para a comunidade que foi criada como um substituto estável para o CentOS. O CentOS era uma distribuição de código aberto intimamente relacionada à Red Hat, e sua última versão estável, o CentOS 8, foi lançada em dezembro de 2021. O CentOS usou o código-fonte publicado pela Red Hat para fornecer uma plataforma semelhante. O AlmaLinux foi projetado para ser um substituto imediato do CentOS 8. Isso garante que os aplicativos e as configurações que funcionavam no CentOS continuarão a funcionar no AlmaLinux. 
+
+#### Gerenciadores de pacotes para instalar aplicativos
+
+##### Introdução aos gerenciadores de pacotes
+
+Um pacote é um software que pode ser combinado com outros pacotes para formar um aplicativo. Alguns pacotes podem ser grandes o suficiente para formar aplicativos por conta própria.
+
+Os pacotes contêm os arquivos necessários para que um aplicativo seja instalado. Esses arquivos incluem Dependências, que são arquivos suplementares usados para executar um aplicativo.
+
+Os gerenciadores de pacotes podem ajudar a resolver problemas com Dependências e realizar outras tarefas de gerenciamento. Um gerenciador de pacotes é uma ferramenta que ajuda os usuários a instalar, gerenciar e remover pacotes ou aplicativos. O Linux usa vários gerenciadores de pacotes.
+
+**Observação**: é importante usar a versão mais recente de um pacote sempre que possível. A versão mais recente tem as correções de erros e os patches de segurança mais atualizados. Isso ajuda a manter seu sistema mais seguro.
+
+##### Tipos de gerenciadores de pacotes
+
+Muitas distribuições Linux comumente usadas são derivadas da mesma distribuição principal. Por exemplo, o KALI LINUX ™, o Ubuntu e o Parrot são todos provenientes do Debian. O CentOS vem do Red Hat.
+
+Esse conhecimento é útil ao instalar aplicativos porque determinados gerenciadores de pacotes funcionam com certas distribuições. Por exemplo, o Red Hat Package Manager (RPM) pode ser usado para distribuições Linux derivadas da Red Hat, e gerenciadores de pacotes como o dpkg podem ser usados para distribuições Linux derivadas do Debian.
+
+Gerenciadores de pacotes diferentes normalmente usam extensões de arquivo diferentes. Por exemplo, o Gerenciador de Pacotes Red Hat (RPM) tem arquivos que usam a extensão de arquivo .rpm, como Package-Version-Release_Architecture.rpm. Os gerenciadores de pacotes para distribuições Linux derivadas do Debian, como o dpkg, têm arquivos que usam a extensão de arquivo .deb, como Package_Version-Release_Architecture.deb.
+
+##### Ferramentas de gerenciamento de pacotes
+
+Além dos gerenciadores de pacotes, como o RPM e o dpkg, há também ferramentas de gerenciamento de pacotes que permitem trabalhar facilmente com pacotes por meio do shell. Às vezes, as ferramentas de gerenciamento de pacotes são utilizadas em vez dos gerenciadores de pacotes porque permitem que os usuários executem tarefas básicas com mais facilidade, como a instalação de um novo pacote. Duas ferramentas notáveis são a Advanced Package Tool (APT) e o Yellowdog Updater Modified (YUM).
+
+###### Ferramenta de Pacotes Avançados (APT)
+
+O APT é uma ferramenta usada com distribuições derivadas do Debian. Ele é executado a partir da interface de Linha de Comando (CLI) para gerenciar, pesquisar e instalar pacotes.
+
+###### Yellowdog Updater Modified (YUM)
+
+O YUM é uma ferramenta usada nas distribuições derivadas do Red Hat. É executada a partir da interface de Linha de Comando (CLI) para gerenciar, pesquisar e instalar pacotes. O YUM trabalha com arquivos .rpm.
+
+#### Diferentes tipos de shells
+
+##### Comunicação por meio de um shell
+
+Como você explorou anteriormente, o shell é o interpretador de linha de comando. Você pode pensar em um shell como um tradutor entre você e o sistema do computador. Os shells permitem que você dê comandos ao computador e receba respostas dele. Quando você insere um comando em um shell, ele executa vários processos internos para interpretar o comando, enviá-lo ao kernel e retornar os resultados.
+
+##### Tipos de shells
+
+Os vários tipos diferentes de shells do Linux incluem os seguintes:
+
+- Bourne-Again Shell (bash)
+- C++ Shell (csh)
+- Korn Shell (ksh)
+- Shell em C aprimorado (tcsh)
+- Z Shell (zsh)
+
+Todos os shells do Linux usam comandos comuns do Linux, mas podem diferir em outros recursos. Por exemplo, o ksh e o bash usam o cifrão ($) para indicar onde os usuários digitam seus comandos. Outros shells, como o zsh, usam o sinal de porcentagem (%) para essa finalidade.
+
+##### Bash
+
+O Bash é o shell padrão na maioria das distribuições Linux. É considerado um shell fácil de usar. Você pode usar o Bash para comandos básicos do Linux, bem como para projetos maiores.
+
+O Bash também é o shell mais popular na profissão de segurança cibernética. Você usará o Bash ao longo deste curso para aprender e praticar os comandos do Linux.
